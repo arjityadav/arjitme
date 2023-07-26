@@ -1,0 +1,1257 @@
+{
+    "setupLoginWithUsernameFieldAndPasswordFieldAndLoginButton": {
+        "description": "This function is used to set up the login configuration.",
+        "parameters": "username(String), password(String), loginButton(String)",
+        "format": "username|password|loginButton",
+        "type": "void",
+        "__FixtureType__": "BASE FIXTURE"
+    },
+    "setWebDriver": {
+        "description": "Provides a hook for external QA frameworks",
+        "parameters": "webDriver(org.openqa.selenium.WebDriver) - The web driver defined in the external framework.",
+        "type": "void"
+    },
+    "waitForSeconds": {
+        "description": "Waits for X seconds.",
+        "parameters": "period(java.lang.Integer) - Number of seconds to wait for",
+        "format": "period",
+        "type": "void"
+    },
+    "waitForMinutes": {
+        "description": "Waits for X minutes.",
+        "parameters": "period(java.lang.Integer) - Number of minutes to wait for",
+        "format": "period",
+        "type": "void"
+    },
+    "waitForHours": {
+        "description": "Wait for X hours.",
+        "parameters": "period(java.lang.Integer) - Number of hours to wait for",
+        "format": "period",
+        "type": "void"
+    },
+    "waitForWorking": {
+        "description": "Waits for 'Working...' message to disappear",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "waitForProgressBar": {
+        "description": "Waits for Progerss Bar to disappear",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "waitUntil": {
+        "description": "Waits until a particular datetime",
+        "parameters": "datetime(java.lang.String) - Datetime string must match yyyy-mm-dd HH:mm",
+        "format": "datetime",
+        "type": "void"
+    },
+    "refresh": {
+        "description": "Refreshes page",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "tearDown": {
+        "description": "Closes browser and driver quits. Used to end automated test.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "getRandomString": {
+        "description": "Returns a random string of a specific length",
+        "parameters": "length(int) - Length of random string",
+        "format": "length",
+        "type": "java.lang.String"
+    },
+    "getRandomAlphabetString": {
+        "description": "Returns a random alphabetic string of a specific length",
+        "parameters": "length(int) - Length of random alphabet string",
+        "format": "length",
+        "type": "java.lang.String"
+    },
+    "getRandomIntegerFromTo": {
+        "description": "Returns a random integer of a specific length",
+        "parameters": "min(int), max(int) - Minimum and Maximum of random integer",
+        "format": "min|max",
+        "type": "int"
+    },
+    "getRandomDecimalFromTo": {
+        "description": "Returns a random decimal of a specific length",
+        "parameters": "min(double), max(double) - Minimum and Maximum of random decimal",
+        "format": "min|max",
+        "type": "double"
+    },
+    "getRandomDecimalFromToWith": {
+        "description": "Returns a random decimal of a specific length",
+        "parameters": "min(double), max(double), decimalPlaces(int) - Minimum and Maximum of random decimal, Number of decimal places to display",
+        "format": "min|max|decimalPlaces",
+        "type": "double"
+    },
+    "acceptTask": {
+        "description": "Accepts a task if the task can be accepted.",
+        "parameters": "",
+        "format": "",
+        "type": "void",
+        "__FixtureType__": "TEMPO FIXTURE"
+    },
+    "addCommentToPostContaining": {
+        "description": "Adds supplied comment to post containing supplied text",
+        "parameters": "comment(java.lang.String), newsText(java.lang.String)",
+        "format": "comment|newsText",
+        "type": "void"
+    },
+    "clearField": {
+        "description": "Used to clear a field. This method currently works for text, integer paragraph, dropdown, file upload, datetime, date, picker",
+        "parameters": "fieldName(java.lang.String) - FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]",
+        "format": "fieldName",
+        "type": "void"
+    },
+    "clearFieldOf": {
+        "description": "Used to clear a field of specific values. This method is only useful for picker objects to unselect an item.",
+        "parameters": "fieldName(java.lang.String), fieldValues(java.lang.String[])",
+        "format": "fieldName|fieldValues",
+        "type": "void"
+    },
+    "clearGridColumnRow": {
+        "description": "Used to clear a field in a grid. This method currently works for",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String)",
+        "format": "gridName|columnName|rowNum",
+        "type": "void"
+    },
+    "clearRecordTypeUserFilter": {
+        "description": "Clear record type user filter.",
+        "parameters": "userFilter(java.lang.String) - USER_FILTER_NAME",
+        "format": "userFilter",
+        "type": "void"
+    },
+    "clearSearchValue": {
+        "description": "Clears search field in Records.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "clickOnAction": {
+        "description": "Clicks on the associated action.",
+        "parameters": "actionName(java.lang.String) - ACTION_NAME or ACTION_NAME[INDEX]",
+        "format": "actionName",
+        "type": "void"
+    },
+    "clickOnApplicationFilter": {
+        "description": "Clicks on an actions application filter.",
+        "parameters": "appFilter(java.lang.String) - APP_FILTER",
+        "format": "appFilter",
+        "type": "void"
+    },
+    "clickOnBarChartBar": {
+        "description": "Clicks on a specific bar of a bar chart on a page.",
+        "parameters": "barChartLabel(java.lang.String), barNumber(java.lang.String)",
+        "format": "barChartLabel|barNumber",
+        "type": "void"
+    },
+    "clickOnButton": {
+        "description": "Clicks on the first button that matches the buttonName.",
+        "parameters": "buttonName(java.lang.String) - BUTTON_NAME or BUTTON_NAME[INDEX]",
+        "format": "buttonName",
+        "type": "void"
+    },
+    "clickOnButtonWithTooltip": {
+        "description": "Clicks on button with tooltip.",
+        "parameters": "tooltip(java.lang.String) - TOOLTIP",
+        "format": "tooltip",
+        "type": "void"
+    },
+    "clickOnCard": {
+        "description": "Clicks on a card.",
+        "parameters": "linkName(java.lang.String) - CARD_LINK_NAME",
+        "format": "linkName",
+        "type": "void"
+    },
+    "clickOnCardChoice": {
+        "description": "Clicks on a card in a card choice field.",
+        "parameters": "cardName(java.lang.String), fieldName(java.lang.String) - CARD_NAME | FIELD_NAME",
+        "format": "cardName|fieldName",
+        "type": "void"
+    },
+    "clickOnCheckboxOption": {
+        "description": "Clicks on the first checkbox option that matches the optionName.",
+        "parameters": "optionName(java.lang.String) - OPTION_NAME",
+        "format": "optionName",
+        "type": "void"
+    },
+    "clickOnColumnChartColumn": {
+        "description": "Clicks on a specific column of a column chart on a page.",
+        "parameters": "columnChartLabel(java.lang.String), columnNumber(java.lang.String)",
+        "format": "columnChartLabel|columnNumber",
+        "type": "void"
+    },
+    "clickOnDocumentImageLink": {
+        "description": "Clicks on the first document image link that matches the icon alt text.",
+        "parameters": "documentImageLinkAltTextName(java.lang.String) - ALT_TEXT_NAME or ALT_TEXT_NAME[INDEX]",
+        "format": "documentImageLinkAltTextName",
+        "type": "void"
+    },
+    "clickOnGridAddRowLink": {
+        "description": "Clicks on the add row link for a grid",
+        "parameters": "gridName(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX]",
+        "format": "gridName",
+        "type": "void"
+    },
+    "clickOnGridColumnRow": {
+        "description": "Clicks a grid cell.",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String)",
+        "format": "gridName|columnName|rowNum",
+        "type": "void"
+    },
+    "clickOnGridNavigation": {
+        "description": "Clicks on the page link below a paging grid",
+        "parameters": "gridName(java.lang.String), navOption(java.lang.String) - GRID_NAME | NAV_REFERENCE (nav reference only takes \"first\", previous, next, or \"last\")",
+        "format": "gridName|navOption",
+        "type": "void"
+    },
+    "clickOnIconLink": {
+        "description": "Clicks on the first icon link that matches the icon alt text.",
+        "parameters": "iconAltTextName(java.lang.String) - ALT_TEXT_NAME or ALT_TEXT_NAME[INDEX]",
+        "format": "iconAltTextName",
+        "type": "void"
+    },
+    "clickOnLineChartPoint": {
+        "description": "Clicks on a specific point of a line chart on a page.",
+        "parameters": "lineChartLabel(java.lang.String), pointNumber(java.lang.String)",
+        "format": "lineChartLabel|pointNumber",
+        "type": "void"
+    },
+    "clickOnLink": {
+        "description": "Clicks on the first link that matches the linkName.",
+        "parameters": "linkName(java.lang.String) - LINK_NAME or LINK_NAME[INDEX]",
+        "format": "linkName",
+        "type": "void"
+    },
+    "clickOnMenu": {
+        "description": "Clicks on the associated tempo menu.",
+        "parameters": "tempoMenu(java.lang.String) - MENU_NAME",
+        "format": "tempoMenu",
+        "type": "void"
+    },
+    "clickOnMenuWidget": {
+        "description": "Clicks on menu widget item.",
+        "parameters": "menuWidget(java.lang.String) - MENU_WIDGET or MENU_WIDGET[INDEX] or [INDEX]",
+        "format": "menuWidget",
+        "type": "void"
+    },
+    "clickOnMilestoneStep": {
+        "description": "Clicks on a milestone step.",
+        "parameters": "milestone(java.lang.String), step(java.lang.String) - MILESTONE or MILESTONE[INDEX] or [INDEX] | STEP or [INDEX]",
+        "format": "milestone|step",
+        "type": "void"
+    },
+    "clickOnNewsFeedRecordTag": {
+        "description": "Clicks on a record tag to navigate to a record summary dashboard.",
+        "parameters": "newsText(java.lang.String), recordTag(java.lang.String) - NEWS_TEXT | RECORD_TAG",
+        "format": "newsText|recordTag",
+        "type": "void"
+    },
+    "clickOnPieChartPieSlice": {
+        "description": "Clicks on a specific slice of a pie chart on a page.",
+        "parameters": "pieChartLabel(java.lang.String), pieSliceNumber(java.lang.String) - CHART_LABEL or CHART_LABEL[INDEX] | [INDEX]",
+        "format": "pieChartLabel|pieSliceNumber",
+        "type": "void"
+    },
+    "clickOnRadioOption": {
+        "description": "Clicks on the first radio option that matches the optionName.",
+        "parameters": "optionName(java.lang.String) - OPTION_NAME",
+        "format": "optionName",
+        "type": "void"
+    },
+    "clickOnRecord": {
+        "description": "Clicks on the associated record.",
+        "parameters": "recordName(java.lang.String) - RECORD_NAME or RECORD_NAME[INDEX] or [INDEX]",
+        "format": "recordName",
+        "type": "void"
+    },
+    "clickOnRecordActionFieldMenuAction": {
+        "description": "Click a specified action inside a record action field with styling of MENU or MENU_ICON.",
+        "parameters": "indexOfField(java.lang.String), action(java.lang.String) - [INDEX] | ACTION_NAME or [INDEX]",
+        "format": "indexOfField|action",
+        "type": "void"
+    },
+    "clickOnRecordGridNavigation": {
+        "description": "Clicks on record grid navigation option.",
+        "parameters": "navOption(java.lang.String) - NAVIGATION_OPTION (Navigation option can only be \"First\", \"Previous\", \"Next\", or \"Last\")",
+        "format": "navOption",
+        "type": "void"
+    },
+    "clickOnRecordRelatedAction": {
+        "description": "Clicks on the associated related action.",
+        "parameters": "relatedActionName(java.lang.String) - RELATED_ACTION_NAME",
+        "format": "relatedActionName",
+        "type": "void"
+    },
+    "clickOnRecordType": {
+        "description": "Clicks on the record type.",
+        "parameters": "typeName(java.lang.String) - RECORD_TYPE_NAME or RECORD_TYPE_NAME[INDEX]",
+        "format": "typeName",
+        "type": "void"
+    },
+    "clickOnRecordView": {
+        "description": "Clicks on the associated record view.",
+        "parameters": "viewName(java.lang.String) - VIEW_NAME",
+        "format": "viewName",
+        "type": "void"
+    },
+    "clickOnReport": {
+        "description": "Clicks on the associated report.",
+        "parameters": "reportName(java.lang.String) - REPORT_NAME or REPORT_NAME[INDEX]",
+        "format": "reportName",
+        "type": "void"
+    },
+    "clickOnSaveChanges": {
+        "description": "Clicks on the save changes link.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "clickOnSignatureField": {
+        "description": "Clicks on the Signature Field button with the specified label.",
+        "parameters": "label(java.lang.String) - LABEL",
+        "format": "label",
+        "type": "void"
+    },
+    "clickOnTagFieldTagItem": {
+        "description": "Clicks on a tag field's tag item.",
+        "parameters": "tagField(java.lang.String), tagItem(java.lang.String) - TAG_FIELD or TAG_FIELD[INDEX] | TAG_ITEM or TAG_ITEM[INDEX]",
+        "format": "tagField|tagItem",
+        "type": "void"
+    },
+    "clickOnTagItem": {
+        "description": "Clicks on a tag item.",
+        "parameters": "tagItem(java.lang.String) - TAG_ITEM or TAG_ITEM[INDEX]",
+        "format": "tagItem",
+        "type": "void"
+    },
+    "clickOnTask": {
+        "description": "Clicks on the associated task.",
+        "parameters": "taskName(java.lang.String) - TASK_NAME or TASK_NAME[INDEX]",
+        "format": "taskName",
+        "type": "void"
+    },
+    "clickOnTaskReport": {
+        "description": "Click on a task report.",
+        "parameters": "taskReport(java.lang.String) - TASK_REPORT_NAME",
+        "format": "taskReport",
+        "type": "void"
+    },
+    "clickUserProfileCircleOnPostContaining": {
+        "description": "Clicks the user profile circle on a news post containing the supplied text.",
+        "parameters": "newsText(java.lang.String) - MESSAGE",
+        "format": "newsText",
+        "type": "void"
+    },
+    "clickUserProfileLinkOnPostContaining": {
+        "description": "Clicks the user profile link on a news post containing the supplied text.",
+        "parameters": "newsText(java.lang.String) - MESSAGE",
+        "format": "newsText",
+        "type": "void"
+    },
+    "closeSocialTaskContainingWithComment": {
+        "description": "Close the social task containing supplied text and add a comment.",
+        "parameters": "taskText(java.lang.String), comment(java.lang.String) - MESSAGE | COMMENT",
+        "format": "taskText|comment",
+        "type": "void"
+    },
+    "countGridRows": {
+        "description": "Count rows in an editable or paging grid.",
+        "parameters": "gridName(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX]",
+        "format": "gridName",
+        "type": "java.lang.Integer"
+    },
+    "deleteAllNewsPosts": {
+        "description": "Verifies a news item containing specific text with a specific label and value is present. Deletes a news post.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "deleteNewsPost": {
+        "description": "Deletes a news post.",
+        "parameters": "newsText(java.lang.String) - NEWS_TEXT",
+        "format": "newsText",
+        "type": "void"
+    },
+    "drawSignature": {
+        "description": "Draws a dummy signature in the signature panel.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "errorIsPresent": {
+        "description": "Returns true if there is an error on tempo.",
+        "parameters": "",
+        "format": "",
+        "type": "boolean"
+    },
+    "expandSection": {
+        "description": "Deprecated.",
+        "parameters": "sectionName(java.lang.String) - SECTION_NAME",
+        "format": "sectionName",
+        "type": "void"
+    },
+    "filterNewsOn": {
+        "description": "Clicks supplied news feed filter name.",
+        "parameters": "filterName(java.lang.String) - FILTER_NAME",
+        "format": "filterName",
+        "type": "void"
+    },
+    "getBoxContents": {
+        "description": "Returns the values in a box as a JSON object.",
+        "parameters": "boxName(java.lang.String) - BOX_NAME",
+        "format": "boxName",
+        "type": "org.json.JSONObject"
+    },
+    "getCardContents": {
+        "description": "Returns the values in a card as a JSON object.",
+        "parameters": "cardName(java.lang.String) - CARD_NAME",
+        "format": "cardName",
+        "type": "org.json.JSONObject"
+    },
+    "getFieldInSectionValue": {
+        "description": "Returns the value of a field in a section.",
+        "parameters": "fieldName(java.lang.String), sectionName(java.lang.String) - FIELD_LABEL or [FIELD_INDEX] | SECTION_NAME",
+        "format": "fieldName|sectionName",
+        "type": "java.lang.String"
+    },
+    "getFieldValidationMessage": {
+        "description": "Returns the validation message from a field.",
+        "parameters": "fieldName(java.lang.String) - FIELD_NAME",
+        "format": "fieldName",
+        "type": "java.lang.String"
+    },
+    "getFieldValue": {
+        "description": "Returns the value of a field.",
+        "parameters": "fieldName(java.lang.String) - FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]",
+        "format": "fieldName",
+        "type": "java.lang.String"
+    },
+    "getFieldWithInstructionsValue": {
+        "description": "Returns the value of a field using instructions.",
+        "parameters": "instructions(java.lang.String) - INSTRUCTIONS",
+        "format": "instructions",
+        "type": "java.lang.String"
+    },
+    "getFieldWithPlaceholderValue": {
+        "description": "Returns the value of a field using a placeholder.",
+        "parameters": "placeholder(java.lang.String) - PLACEHOLDER",
+        "format": "placeholder",
+        "type": "java.lang.String"
+    },
+    "getFieldWithTooltipValue": {
+        "description": "Returns the value of a field using a tooltip.",
+        "parameters": "tooltip(java.lang.String) - TOOLTIP",
+        "format": "tooltip",
+        "type": "java.lang.String"
+    },
+    "getFormInstructions": {
+        "description": "Returns the instructions of the form.",
+        "parameters": "",
+        "format": "",
+        "type": "java.lang.String"
+    },
+    "getFormTitle": {
+        "description": "Returns the title of the form.",
+        "parameters": "",
+        "format": "",
+        "type": "java.lang.String"
+    },
+    "getGaugeFieldPercentage": {
+        "description": "Gets the percentage of a gauge field.",
+        "parameters": "gaugeField(java.lang.String) - GAUGE_FIELD or GAUGE_FIELD[INDEX]",
+        "format": "gaugeField",
+        "type": "java.lang.String"
+    },
+    "getGridColumnRowValue": {
+        "description": "Returns the value of a field.",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | COLUMN_NAME or [COLUMN_INDEX] | [ROW_INDEX]",
+        "format": "gridName|columnName|rowNum",
+        "type": "java.lang.String"
+    },
+    "getGridContents": {
+        "description": "Returns the values in a section as a JSON object.",
+        "parameters": "gridName(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX]",
+        "format": "gridName",
+        "type": "org.json.JSONObject"
+    },
+    "getGridIndex": {
+        "description": "Find a grid index.",
+        "parameters": "headers(java.lang.String) - [semicolon separated list of one or more sequential headers]",
+        "format": "headers",
+        "type": "java.lang.String"
+    },
+    "getGridRowCount": {
+        "description": "Returns the value of a field.",
+        "parameters": "gridName(java.lang.String) - GRID_NAME_OR_INDEX",
+        "format": "gridName",
+        "type": "int"
+    },
+    "getGridTotalCount": {
+        "description": "Returns the value of a field.",
+        "parameters": "gridName(java.lang.String) - GRID_NAME_OR_INDEX",
+        "format": "gridName",
+        "type": "int"
+    },
+    "getLinkURL": {
+        "description": "Returns the URL of a link field.",
+        "parameters": "linkName(java.lang.String) - LINK_NAME or LINK_NAME[INDEX]",
+        "format": "linkName",
+        "type": "java.lang.String"
+    },
+    "getMilestoneStep": {
+        "description": "Verifies if a milestone is currently on a particular step.",
+        "parameters": "milestone(java.lang.String) - MILESTONE or MILESTONE[INDEX]",
+        "format": "milestone",
+        "type": "java.lang.String"
+    },
+    "getRegexGroupFromFieldInSectionValue": {
+        "description": "Returns a string that matches the regex from a field in a specified section.",
+        "parameters": "regex(java.lang.String), group(java.lang.Integer), fieldName(java.lang.String), sectionName(java.lang.String) - [A-z]{3}-[0-9]{4} | GROUP | FIELD_NAME | SECTION_NAME",
+        "format": "regex|group|fieldName|sectionName",
+        "type": "java.lang.String"
+    },
+    "getRegexGroupFromFieldValue": {
+        "description": "Returns a string that matches the regex from a field's value.",
+        "parameters": "regex(java.lang.String), group(java.lang.Integer), fieldName(java.lang.String) - [A-z]{3}-[0-9]{4} | GROUP | FIELD_NAME | VALUE",
+        "format": "regex|group|fieldName",
+        "type": "java.lang.String"
+    },
+    "getRegexGroupFromFormTitle": {
+        "description": "Returns a string that matches the regex from a form's title.",
+        "parameters": "regex(java.lang.String), group(java.lang.Integer) - [A-z]{3}-[0-9]{4} | GROUP | FORM_TITLE",
+        "format": "regex|group",
+        "type": "java.lang.String"
+    },
+    "getRegexGroupFromGridColumnRowValue": {
+        "description": "Returns a string that matches the regex from a specific grid cell.",
+        "parameters": "regex(java.lang.String), group(java.lang.Integer), gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String) - [A-z]{3}-[0-9]{4} | GROUP | GRID_NAME | COLUMN_NAME_OR_INDEX | [Row_Number] | VALUE",
+        "format": "regex|group|gridName|columnName|rowNum",
+        "type": "java.lang.String"
+    },
+    "getRegexGroupFromNewsFeedContainingText": {
+        "description": "Returns a string that matches the regex from the news feed containing text.",
+        "parameters": "regex(java.lang.String), group(java.lang.Integer), newsText(java.lang.String) - [A-z]{3}-[0-9]{4} | GROUP | NEWS_TEXT",
+        "format": "regex|group|newsText",
+        "type": "java.lang.String"
+    },
+    "getRegexGroupFromNewsFeedContainingTextCommentedWith": {
+        "description": "Returns a string that matches the regex from a comment in the news feed.",
+        "parameters": "regex(java.lang.String), group(java.lang.Integer), newsText(java.lang.String), newsComment(java.lang.String) - [A-z]{3}-[0-9]{4} | GROUP | NEWS_TEXT | NEWS_COMMENT",
+        "format": "regex|group|newsText|newsComment",
+        "type": "java.lang.String"
+    },
+    "getRegexGroupFromRecordNameContainingText": {
+        "description": "Returns a string that matches the regex from a record whose name matches the specified text.",
+        "parameters": "regex(java.lang.String), group(java.lang.Integer), recordText(java.lang.String) - [A-z]{3}-[0-9]{4} | GROUP | RECORD_TEXT",
+        "format": "regex|group|recordText",
+        "type": "java.lang.String"
+    },
+    "getRegexGroupFromTaskNameContainingText": {
+        "description": "Returns a string that matches the regex from a task's name containing the specified text.",
+        "parameters": "regex(java.lang.String), group(java.lang.Integer), taskText(java.lang.String) - [A-z]{3}-[0-9]{4} | GROUP | TASK_TEXT",
+        "format": "regex|group|taskText",
+        "type": "java.lang.String"
+    },
+    "getSectionContents": {
+        "description": "Returns the values in a section as a JSON object.",
+        "parameters": "sectionName(java.lang.String) - SECTION_NAME",
+        "format": "sectionName",
+        "type": "org.json.JSONObject"
+    },
+    "getSectionValidationMessage": {
+        "description": "Returns the validation message from a section.",
+        "parameters": "sectionName(java.lang.String) - SECTION_NAME",
+        "format": "sectionName",
+        "type": "java.lang.String"
+    },
+    "logout": {
+        "description": "Logs out of Appian.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "populateDropdownSearchBoxWith": {
+        "description": "Selects a value in a search dropdown.",
+        "parameters": "fieldName(java.lang.String), searchValue(java.lang.String) - FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX] | VALUE",
+        "format": "fieldName|searchValue",
+        "type": "void"
+    },
+    "populateFieldInSectionWith": {
+        "description": "Populates a field in a section with specific values.",
+        "parameters": "fieldName(java.lang.String), sectionName(java.lang.String), fieldValues(java.lang.String[]) - FIELD_LABEL OR [FIELD_INDEX] | SECTION_NAME | VALUE(S)",
+        "format": "fieldName|sectionName|fieldValues",
+        "type": "void"
+    },
+    "populateFieldWith": {
+        "description": "Populates a field with specific values.",
+        "parameters": "fieldName(java.lang.String), fieldValues(java.lang.String[]) - FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX] | VALUE(S)",
+        "format": "fieldName|fieldValues",
+        "type": "void"
+    },
+    "populateFieldWithContains": {
+        "description": "Populates a picker field with inputs that display suggestions that aren't an exact match of the inputs.",
+        "parameters": "fieldName(java.lang.String), fieldValues(java.lang.String[]) - FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX] | VALUE(S)",
+        "format": "fieldName|fieldValues",
+        "type": "void"
+    },
+    "populateFieldWithInstructionsWith": {
+        "description": "Populates a field with instructions with specific values.",
+        "parameters": "instructions(java.lang.String), fieldValues(java.lang.String[]) - INSTRUCTIONS | VALUE(S)",
+        "format": "instructions|fieldValues",
+        "type": "void"
+    },
+    "populateFieldWithPartiallyMatchingPickerFieldSuggestion": {
+        "description": "Deprecated.",
+        "parameters": "fieldName(java.lang.String), fieldValues(java.lang.String[]) - FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX] | VALUE(S)",
+        "format": "fieldName|fieldValues",
+        "type": "void"
+    },
+    "populateFieldWithPlaceholderWith": {
+        "description": "Populates a field with placeholder with specific values.",
+        "parameters": "placeholder(java.lang.String), fieldValues(java.lang.String[]) - PLACEHOLDER | VALUE(S)",
+        "format": "placeholder|fieldValues",
+        "type": "void"
+    },
+    "populateFieldWithTooltipWith": {
+        "description": "Populates a field with tooltip with specific values.",
+        "parameters": "tooltip(java.lang.String), fieldValues(java.lang.String[]) - TOOLTIP | VALUE(S)",
+        "format": "tooltip|fieldValues",
+        "type": "void"
+    },
+    "populateFieldWithValue": {
+        "description": "Populates a field with a single value that may contain a comma.",
+        "parameters": "fieldName(java.lang.String), fieldValue(java.lang.String) - FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX] | VALUE",
+        "format": "fieldName|fieldValue",
+        "type": "void"
+    },
+    "populateGridColumnRowWith": {
+        "description": "Populates fields in a grid.",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String), fieldValues(java.lang.String[]) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | COLUMN_NAME or [COLUMN_INDEX] | [ROW_INDEX] | VALUE(S)",
+        "format": "gridName|columnName|rowNum|fieldValues",
+        "type": "void"
+    },
+    "populateGridColumnRowWithPartiallyMatchingPickerFieldSuggestion": {
+        "description": "Populates a picker field in a grid with inputs that display suggestions that aren't an exact match of the inputs.",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String), fieldValues(java.lang.String[]) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | COLUMN_NAME or [COLUMN_INDEX] | [ROW_INDEX] | VALUE(S)",
+        "format": "gridName|columnName|rowNum|fieldValues",
+        "type": "void"
+    },
+    "populateGridColumnRowWithValue": {
+        "description": "Populates a grid field with a single value that may contain a comma.",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String), fieldValue(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | COLUMN_NAME or [COLUMN_INDEX] | [ROW_INDEX] | VALUE",
+        "format": "gridName|columnName|rowNum|fieldValue",
+        "type": "void"
+    },
+    "populateRecordTypeUserFilterWith": {
+        "description": "Populate on the record type user filter with value.",
+        "parameters": "userFilter(java.lang.String), value(java.lang.String) - USER_FILTER_NAME | VALUE",
+        "format": "userFilter|value",
+        "type": "void"
+    },
+    "searchFor": {
+        "description": "Populates search fields in News, Reports, and Records.",
+        "parameters": "searchTerm(java.lang.String) - SEARCH_TERM",
+        "format": "searchTerm",
+        "type": "void"
+    },
+    "selectAllRowsInGrid": {
+        "description": "Select all rows in a grid.",
+        "parameters": "gridName(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX]",
+        "format": "gridName",
+        "type": "void"
+    },
+    "selectGridRow": {
+        "description": "Selects a row in an editable or paging grid.",
+        "parameters": "gridName(java.lang.String), rowNum(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | [1]",
+        "format": "gridName|rowNum",
+        "type": "void"
+    },
+    "sendKudosTo": {
+        "description": "Sends a Kudos to the specified recipient with the specified message.",
+        "parameters": "message(java.lang.String), recipient(java.lang.String) - MESSAGE | RECIPIENT",
+        "format": "message|recipient",
+        "type": "void"
+    },
+    "sendMessageTo": {
+        "description": "Sends a locked news message to specified recipients.",
+        "parameters": "lockStatus(java.lang.String), message(java.lang.String), recipients(java.util.List<java.lang.String>) - LOCKED or UNLOCKED | MESSAGE | RECIPIENTS",
+        "format": "lockStatus|message|recipients",
+        "type": "void"
+    },
+    "sendPost": {
+        "description": "Sends a post with no participants.",
+        "parameters": "message(java.lang.String) - MESSAGE",
+        "format": "message",
+        "type": "void"
+    },
+    "sendPostTo": {
+        "description": "Sends a post to a list of participants.",
+        "parameters": "message(java.lang.String), participants(java.util.List<java.lang.String>) - MESSAGE | RECIPIENTS",
+        "format": "message|participants",
+        "type": "void"
+    },
+    "sendTaskTo": {
+        "description": "Sends a task from the news message box.",
+        "parameters": "message(java.lang.String), recipient(java.lang.String) - TASK MESSAGE | RECIPIENT",
+        "format": "message|recipient",
+        "type": "void"
+    },
+    "sortByNewest": {
+        "description": "Clicks on the sort by Newest for tasks.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "sortByOldest": {
+        "description": "Clicks on the sort by Oldest for tasks.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "sortGridByColumn": {
+        "description": "Sort a grid by a column.",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | COLUMN_NAME or [COLUMN_INDEX]",
+        "format": "gridName|columnName",
+        "type": "void"
+    },
+    "sortRecordGridByColumn": {
+        "description": "Sorts Record Grid view by a specific column.",
+        "parameters": "columnName(java.lang.String) - COLUMN_NAME",
+        "format": "columnName",
+        "type": "void"
+    },
+    "starAction": {
+        "description": "Toggles star on the associated action.",
+        "parameters": "actionName(java.lang.String) - ACTION_NAME",
+        "format": "actionName",
+        "type": "void"
+    },
+    "starPostContaining": {
+        "description": "Stars post that contains supplied text.",
+        "parameters": "newsText(java.lang.String) - MESSAGE",
+        "format": "newsText",
+        "type": "void"
+    },
+    "toggleBoxVisibility": {
+        "description": "Expand or collapse a box.",
+        "parameters": "boxName(java.lang.String) - BOX_NAME or [BOX_INDEX] or BOX_NAME[INDEX]",
+        "format": "boxName",
+        "type": "void"
+    },
+    "toggleMoreInfoForNewsFeedContainingText": {
+        "description": "Toggles the more info on a news item containing specific text.",
+        "parameters": "newsText(java.lang.String) - NEWS_TEXT",
+        "format": "newsText",
+        "type": "void"
+    },
+    "toggleSectionVisibility": {
+        "description": "Expand or collapse a section.",
+        "parameters": "sectionName(java.lang.String) - SECTION_NAME",
+        "format": "sectionName",
+        "type": "void"
+    },
+    "verifyActionCompleted": {
+        "description": "Deprecated.",
+        "parameters": "",
+        "format": "",
+        "type": "boolean"
+    },
+    "verifyActionIsNotPresent": {
+        "description": "Verifies if action is not present in the user interface.",
+        "parameters": "actionName(java.lang.String) - ACTION_NAME",
+        "format": "actionName",
+        "type": "boolean"
+    },
+    "verifyActionIsPresent": {
+        "description": "Verifies if action is present in the user interface.",
+        "parameters": "actionName(java.lang.String) - ACTION_NAME",
+        "format": "actionName",
+        "type": "boolean"
+    },
+    "verifyApplicationFilterIsNotPresent": {
+        "description": "Verifies if action is not present in the user interface.",
+        "parameters": "applicationName(java.lang.String) - APPLICATION_NAME",
+        "format": "applicationName",
+        "type": "boolean"
+    },
+    "verifyApplicationFilterIsPresent": {
+        "description": "Verifies if action is present in the user interface.",
+        "parameters": "applicationName(java.lang.String) - APPLICATION_NAME",
+        "format": "applicationName",
+        "type": "boolean"
+    },
+    "verifyBoxIsNotPresent": {
+        "description": "Verifies a box is not present. The method will wait for the not present timeout period before declaring the box not present.",
+        "parameters": "boxLabel(java.lang.String) - BOX_LABEL",
+        "format": "boxLabel",
+        "type": "boolean"
+    },
+    "verifyBoxIsPresent": {
+        "description": "Verifies a box is present. The method will wait for the timeout period before failing.",
+        "parameters": "boxLabel(java.lang.String) - BOX_LABEL",
+        "format": "boxLabel",
+        "type": "boolean"
+    },
+    "verifyButtonIsDisabled": {
+        "description": "Verifies if button with given label is disabled in the user interface.",
+        "parameters": "buttonName(java.lang.String) - BUTTON_NAME",
+        "format": "buttonName",
+        "type": "boolean"
+    },
+    "verifyButtonIsEnabled": {
+        "description": "Verifies if button with given label is not disabled in the user interface.",
+        "parameters": "buttonName(java.lang.String) - BUTTON_NAME",
+        "format": "buttonName",
+        "type": "boolean"
+    },
+    "verifyButtonIsNotPresent": {
+        "description": "Verifies if button with given label is not present in the user interface.",
+        "parameters": "buttonName(java.lang.String) - BUTTON_NAME",
+        "format": "buttonName",
+        "type": "boolean"
+    },
+    "verifyButtonIsPresent": {
+        "description": "Verifies if button with given label is present in the user interface.",
+        "parameters": "buttonName(java.lang.String) - BUTTON_NAME",
+        "format": "buttonName",
+        "type": "boolean"
+    },
+    "verifyCardChoiceIsSelected": {
+        "description": "Verifies if card is selected in card choice field.",
+        "parameters": "cardName(java.lang.String), fieldName(java.lang.String) - CARD_NAME | FIELD_NAME",
+        "format": "cardName|fieldName",
+        "type": "boolean"
+    },
+    "verifyCardIsNotPresent": {
+        "description": "Verifies a card is not present. The method will wait for the not present timeout before it declares card not present.",
+        "parameters": "cardLabel(java.lang.String) - CARD_LABEL",
+        "format": "cardLabel",
+        "type": "boolean"
+    },
+    "verifyCardIsPresent": {
+        "description": "Verifies a card is present. The method will wait for the timeout period before failing.",
+        "parameters": "cardLabel(java.lang.String) - CARD_LABEL",
+        "format": "cardLabel",
+        "type": "boolean"
+    },
+    "verifyChartIsNotPresent": {
+        "description": "Verifies a chart containing a specific label is not present.",
+        "parameters": "chartLabel(java.lang.String) - CHART_LABEL",
+        "format": "chartLabel",
+        "type": "boolean"
+    },
+    "verifyChartIsPresent": {
+        "description": "Verifies a chart containing a specific label is present.",
+        "parameters": "chartLabel(java.lang.String) - CHART_LABEL",
+        "format": "chartLabel",
+        "type": "boolean"
+    },
+    "verifyConfirmationDialogHeaderIsPresent": {
+        "description": "Verifies there is a confirmation dialog with the specified header.",
+        "parameters": "headerText(java.lang.String) - HEADER_TEXT",
+        "format": "headerText",
+        "type": "boolean"
+    },
+    "verifyConfirmationDialogMessageIsPresent": {
+        "description": "Verifies there is a confirmation dialog with the specified message.",
+        "parameters": "messageText(java.lang.String) - MESSAGE_TEXT",
+        "format": "messageText",
+        "type": "boolean"
+    },
+    "verifyFieldContains": {
+        "description": "Verifies a field contains a specific value.",
+        "parameters": "fieldName(java.lang.String), fieldValues(java.lang.String[]) - FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX] | VALUES() | For date and datetime fields, relative times can be entered such as +1 minute, +2 hours, +3 days.",
+        "format": "fieldName|fieldValues",
+        "type": "boolean"
+    },
+    "verifyFieldContainsValidationMessage": {
+        "description": "Verifies a field contains a validation message.",
+        "parameters": "fieldName(java.lang.String), validationMessages(java.lang.String[]) - FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX] | VALUES()",
+        "format": "fieldName|validationMessages",
+        "type": "boolean"
+    },
+    "verifyFieldContainsValue": {
+        "description": "Verifies a field with a single value that may contain a comma.",
+        "parameters": "fieldName(java.lang.String), fieldValue(java.lang.String) - FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX] | VALUE",
+        "format": "fieldName|fieldValue",
+        "type": "boolean"
+    },
+    "verifyFieldInSectionContains": {
+        "description": "Verifies a field contains a specific value in a section.",
+        "parameters": "fieldName(java.lang.String), sectionName(java.lang.String), fieldValues(java.lang.String[]) - FIELD_NAME | SECTION_NAME | VALUES",
+        "format": "fieldName|sectionName|fieldValues",
+        "type": "boolean"
+    },
+    "verifyFieldIsNotBlank": {
+        "description": "Verifies a field is not blank.",
+        "parameters": "fieldName(java.lang.String) - FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]",
+        "format": "fieldName",
+        "type": "boolean"
+    },
+    "verifyFieldIsNotPresent": {
+        "description": "Verifies if field is not displayed in the interface.",
+        "parameters": "fieldName(java.lang.String) - FIELD_NAME",
+        "format": "fieldName",
+        "type": "boolean"
+    },
+    "verifyFieldIsPresent": {
+        "description": "Verifies if field is displayed in the interface.",
+        "parameters": "fieldName(java.lang.String) - FIELD_NAME",
+        "format": "fieldName",
+        "type": "boolean"
+    },
+    "verifyFieldWithInstructionsContains": {
+        "description": "Verifies a field with instructions contains a specific value.",
+        "parameters": "instructions(java.lang.String), fieldValues(java.lang.String[]) - INSTRUCTIONS | VALUES",
+        "format": "instructions|fieldValues",
+        "type": "boolean"
+    },
+    "verifyFieldWithPlaceholderContains": {
+        "description": "Verifies a field with a placeholder contains a specific value.",
+        "parameters": "placeholder(java.lang.String), fieldValues(java.lang.String[]) - PLACEHOLDER | VALUES",
+        "format": "placeholder|fieldValues",
+        "type": "boolean"
+    },
+    "verifyFieldWithTooltipContains": {
+        "description": "Verifies a field with a tooltip contains a specific value.",
+        "parameters": "tooltip(java.lang.String), fieldValues(java.lang.String[]) - TOOLTIP | VALUES",
+        "format": "tooltip|fieldValues",
+        "type": "boolean"
+    },
+    "verifyGaugeFieldPercentageIs": {
+        "description": "Verifies the percentage of a gauge field.",
+        "parameters": "gaugeField(java.lang.String), percentage(java.lang.String) - GAUGE FIELD or GAUGE FIELD[INDEX] | PERCENTAGE",
+        "format": "gaugeField|percentage",
+        "type": "boolean"
+    },
+    "verifyGridColumnRowContains": {
+        "description": "Verifies a field contains a specific value in a grid.",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String), fieldValues(java.lang.String[]) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | COLUMN_NAME or [COLUMN_INDEX] | [ROW_INDEX] | VALUES | Image field cells return the alt text of the image.",
+        "format": "gridName|columnName|rowNum|fieldValues",
+        "type": "boolean"
+    },
+    "verifyGridColumnRowContainsValue": {
+        "description": "Verifies a grid field with a single value that may contain a comma.",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String), fieldValue(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | COLUMN_NAME or [COLUMN_INDEX] | [ROW_INDEX] | VALUE",
+        "format": "gridName|columnName|rowNum|fieldValue",
+        "type": "boolean"
+    },
+    "verifyGridColumnRowIsNotBlank": {
+        "description": "Verifies a grid field is not blank.",
+        "parameters": "gridName(java.lang.String), columnName(java.lang.String), rowNum(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | COLUMN_NAME or [COLUMN_INDEX] | [ROW_INDEX]",
+        "format": "gridName|columnName|rowNum",
+        "type": "boolean"
+    },
+    "verifyGridRowIsSelected": {
+        "description": "Verifies if a grid row is selected.",
+        "parameters": "gridName(java.lang.String), rowNum(java.lang.String) - GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX] | ROW_NUMBER",
+        "format": "gridName|rowNum",
+        "type": "boolean"
+    },
+    "verifyHoverOverNewsPosterCircleOnPostContaining": {
+        "description": "Hovers mouse over the user profile circle on a news post containing the supplied text.",
+        "parameters": "newsText(java.lang.String) - MESSAGE",
+        "format": "newsText",
+        "type": "boolean"
+    },
+    "verifyHoverOverNewsPosterLinkOnPostContaining": {
+        "description": "Hovers over the user profile link on a news post containing the supplied text.",
+        "parameters": "newsText(java.lang.String) - MESSAGE",
+        "format": "newsText",
+        "type": "boolean"
+    },
+    "verifyLinkIsNotPresent": {
+        "description": "Verifies there is a not link with the specified name.",
+        "parameters": "linkName(java.lang.String) - LINK_NAME",
+        "format": "linkName",
+        "type": "boolean"
+    },
+    "verifyLinkIsPresent": {
+        "description": "Verifies there is a link with the specified name.",
+        "parameters": "linkName(java.lang.String) - LINK_NAME",
+        "format": "linkName",
+        "type": "boolean"
+    },
+    "verifyLinkURLContains": {
+        "description": "Verifies if a link field's URL contains a specific value.",
+        "parameters": "linkName(java.lang.String), URLText(java.lang.String) - LINK_NAME | URL_TEXT",
+        "format": "linkName|URLText",
+        "type": "boolean"
+    },
+    "verifyMilestoneStepIs": {
+        "description": "Verifies if a milestone is currently on a particular step.",
+        "parameters": "milestone(java.lang.String), step(java.lang.String) - MILESTONE or MILESTONE[INDEX] | STEP or [INDEX]",
+        "format": "milestone|step",
+        "type": "boolean"
+    },
+    "verifyNewsFeedContainingLinkNavigation": {
+        "description": "Clicks on the posted at link for a news post containing the supplied text and verifies that the browser is directed to a URL with the appropriate ID.",
+        "parameters": "newsText(java.lang.String) - MESSAGE",
+        "format": "newsText",
+        "type": "boolean"
+    },
+    "verifyNewsFeedContainingTextAndMoreInfoWithLabelAndValueIsPresent": {
+        "description": "Verifies there is a news post containing specific text with a specific label and value is present.",
+        "parameters": "newsText(java.lang.String), label(java.lang.String), value(java.lang.String) - NEWS_TEXT | LABEL | VALUE",
+        "format": "newsText|label|value",
+        "type": "boolean"
+    },
+    "verifyNewsFeedContainingTextCommentedWithIsPresent": {
+        "description": "Verifies a news item containing specific text with a specific comment is present.",
+        "parameters": "newsText(java.lang.String), newsComment(java.lang.String) - NEWS_TEXT | COMMENT",
+        "format": "newsText|newsComment",
+        "type": "boolean"
+    },
+    "verifyNewsFeedContainingTextIsNotPresent": {
+        "description": "Verifies a news item containing specific text is not present.",
+        "parameters": "newsText(java.lang.String) - NEWS_TITLE",
+        "format": "newsText",
+        "type": "boolean"
+    },
+    "verifyNewsFeedContainingTextIsPresent": {
+        "description": "Verifies a news post containing specific text is present.",
+        "parameters": "newsText(java.lang.String) - NEWS_TEXT",
+        "format": "newsText",
+        "type": "boolean"
+    },
+    "verifyNewsFeedContainingTextTaggedWithIsPresent": {
+        "description": "Verifies a news item containing specific text with a specific tag is present.",
+        "parameters": "newsText(java.lang.String), newsTag(java.lang.String) - NEWS_TEXT | RECORD_TAG",
+        "format": "newsText|newsTag",
+        "type": "boolean"
+    },
+    "verifyPostIsStarred": {
+        "description": "Verifies that news post with supplied text is starred.",
+        "parameters": "newsText(java.lang.String) - MESSAGE",
+        "format": "newsText",
+        "type": "boolean"
+    },
+    "verifyRecordIsNotPresent": {
+        "description": "Verifies if record is not present in the user interface.",
+        "parameters": "recordName(java.lang.String) - RECORD_NAME",
+        "format": "recordName",
+        "type": "boolean"
+    },
+    "verifyRecordIsPresent": {
+        "description": "Verifies if record is present in the user interface.",
+        "parameters": "recordName(java.lang.String) - RECORD_NAME",
+        "format": "recordName",
+        "type": "boolean"
+    },
+    "verifyRecordRelatedActionIsNotPresent": {
+        "description": "Verifies if record related action is not present in the user interface.",
+        "parameters": "relatedActionName(java.lang.String) - RELATED_ACTION_NAME",
+        "format": "relatedActionName",
+        "type": "boolean"
+    },
+    "verifyRecordRelatedActionIsPresent": {
+        "description": "Verifies if record related action is present in the user interface.",
+        "parameters": "relatedActionName(java.lang.String) - RELATED_ACTION_NAME",
+        "format": "relatedActionName",
+        "type": "boolean"
+    },
+    "verifyRecordTypeUserFilterIsPresent": {
+        "description": "Deprecated.",
+        "parameters": "userFilter(java.lang.String) - USER_FILTER",
+        "format": "userFilter",
+        "type": "boolean"
+    },
+    "verifyReportIsNotPresent": {
+        "description": "Verifies if report is not present in the user interface.",
+        "parameters": "reportName(java.lang.String) - REPORT_NAME",
+        "format": "reportName",
+        "type": "boolean"
+    },
+    "verifyReportIsPresent": {
+        "description": "Verifies if report is present in the user interface.",
+        "parameters": "reportName(java.lang.String) - REPORT_NAME",
+        "format": "reportName",
+        "type": "boolean"
+    },
+    "verifySectionContainsValidationMessage": {
+        "description": "Verifies if a section contains a specific error.",
+        "parameters": "sectionName(java.lang.String), validationMessages(java.lang.String[]) - SECTION_NAME | VALUES",
+        "format": "sectionName|validationMessages",
+        "type": "boolean"
+    },
+    "verifySectionIsNotPresent": {
+        "description": "Verifies a section is not present. The method will wait for the not present timeout before it declares section not present.",
+        "parameters": "sectionLabel(java.lang.String) - SECTION_LABEL",
+        "format": "sectionLabel",
+        "type": "boolean"
+    },
+    "verifySectionIsPresent": {
+        "description": "Verifies a section is present. The method will wait for the timeout period before failing.",
+        "parameters": "sectionLabel(java.lang.String) - SECTION_LABEL",
+        "format": "sectionLabel",
+        "type": "boolean"
+    },
+    "verifySignatureFieldIsPresent": {
+        "description": "Verifies the Signature Field with the specified label exists.",
+        "parameters": "label(java.lang.String) - LABEL",
+        "format": "label",
+        "type": "boolean"
+    },
+    "verifySortLabel": {
+        "description": "Gets current sort label, and compare it with the given value.",
+        "parameters": "value(java.lang.String) - VALUE",
+        "format": "value",
+        "type": "boolean"
+    },
+    "verifyStampFieldContainsText": {
+        "description": "Verifies a stamp field is present based on label.",
+        "parameters": "stampField(java.lang.String), text(java.lang.String) - STAMP FIELD or STAMP FIELD[INDEX] | TEXT",
+        "format": "stampField|text",
+        "type": "boolean"
+    },
+    "verifyStampFieldIsPresent": {
+        "description": "Verifies a stamp field is present based on label.",
+        "parameters": "stampField(java.lang.String) - STAMP FIELD or STAMP FIELD[INDEX]",
+        "format": "stampField",
+        "type": "boolean"
+    },
+    "verifyTagFieldIsPresent": {
+        "description": "Verifies a tag field is present.",
+        "parameters": "tagField(java.lang.String) - TAG_FIELD or TAG_FIELD[INDEX]",
+        "format": "tagField",
+        "type": "boolean"
+    },
+    "verifyTagItemIsPresent": {
+        "description": "Verifies a tag item is present.",
+        "parameters": "tagItem(java.lang.String) - TAG_ITEM or TAG_ITEM[INDEX]",
+        "format": "tagItem",
+        "type": "boolean"
+    },
+    "verifyTaskFeedContainingTextIsNotPresent": {
+        "description": "Verifies a social task item containing specific text is not present.",
+        "parameters": "taskText(java.lang.String) - TASK_TEXT",
+        "format": "taskText",
+        "type": "boolean"
+    },
+    "verifyTaskHasDeadlineOf": {
+        "description": "Verify a task with a specific name has a specific deadline.",
+        "parameters": "taskName(java.lang.String), deadline(java.lang.String) - TASK_NAME or TASK_NAME[INDEX] | DEADLINE",
+        "format": "taskName|deadline",
+        "type": "boolean"
+    },
+    "verifyTaskIsNotPresent": {
+        "description": "Verifies if task is not present in the user interface.",
+        "parameters": "taskName(java.lang.String) - TASK_NAME",
+        "format": "taskName",
+        "type": "boolean"
+    },
+    "verifyTaskIsPresent": {
+        "description": "Verifies if task is present in the user interface.",
+        "parameters": "taskName(java.lang.String) - TASK_NAME",
+        "format": "taskName",
+        "type": "boolean"
+    },
+    "verifyTextIsNotPresent": {
+        "description": "Verifies if text is not present in the user interface.",
+        "parameters": "textOnInterface(java.lang.String) - TEXT_ON_INTERFACE",
+        "format": "textOnInterface",
+        "type": "boolean"
+    },
+    "verifyTextIsPresent": {
+        "description": "Verifies if text is present in the user interface.",
+        "parameters": "textOnInterface(java.lang.String) - TEXT_ON_INTERFACE",
+        "format": "textOnInterface",
+        "type": "boolean"
+    },
+    "verifyTimeFieldContains": {
+        "description": "Verifies if time field contains specific time.",
+        "parameters": "timeField(java.lang.String), timeValue(java.lang.String) - TIME_FIELD or TIME_FIELD[INDEX] | TIME_VALUE",
+        "format": "timeField|timeValue",
+        "type": "boolean"
+    },
+    "verifyTimeFieldIsNotPresent": {
+        "description": "Verifies if time field is not present in the user interface.",
+        "parameters": "timeField(java.lang.String) - TIME_FIELD",
+        "format": "timeField",
+        "type": "boolean"
+    },
+    "verifyTimeFieldIsPresent": {
+        "description": "Verifies if time field is present in the user interface.",
+        "parameters": "timeField(java.lang.String) - TIME_FIELD",
+        "format": "timeField",
+        "type": "boolean"
+    },
+    "verifyTimeFieldNotContains": {
+        "description": "Verifies if time field does not contain specific time.",
+        "parameters": "timeField(java.lang.String), timeValue(java.lang.String) - TIME_FIELD or TIME_FIELD[INDEX] | TIME_VALUE",
+        "format": "timeField|timeValue",
+        "type": "boolean"
+    },
+    "verifyToolbarItemIsPresent": {
+        "description": "Verifies if a toolbar item is present.",
+        "parameters": "toolbarItem(java.lang.String) - TOOLBAR_ITEM or TOOLBAR_ITEM[INDEX]",
+        "format": "toolbarItem",
+        "type": "boolean"
+    },
+    "verifyVideoFieldIsPresent": {
+        "description": "Verifies the video field with the specified label exists.",
+        "parameters": "label(java.lang.String) - LABEL",
+        "format": "label",
+        "type": "boolean"
+    },
+    "verifyWeekdayFieldValueIs": {
+        "description": "Verifies a weekday field has a specific value.",
+        "parameters": "weekdayField(java.lang.String), value(java.lang.String) - WEEKDAY_FIELD or WEEKDAY_FIELD[INDEX] | WEEKDAY_VALUE",
+        "format": "weekdayField|value",
+        "type": "boolean"
+    },
+    "wait": {
+        "description": "Pauses the test script for the specified amount of time.",
+        "parameters": "timeout(java.lang.String) - TIMEOUT",
+        "format": "timeout",
+        "type": "void"
+    },
+    "clickOnSitePage": {
+        "description": "Navigate to Appian Site Page.",
+        "parameters": "sitePage(java.lang.String) - SITE_NAME",
+        "format": "sitePage",
+        "type": "void"
+    },
+    "logout": {
+        "description": "Logs out of Appian.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "navigateToSite": {
+        "description": "Navigate to Appian Site.",
+        "parameters": "siteUrl(java.lang.String) - SITE_NAME",
+        "format": "siteUrl",
+        "type": "void"
+    },
+    "navigateToSitePage": {
+        "description": "Navigate to Appian Site Page.",
+        "parameters": "siteUrl(java.lang.String), pageUrl(java.lang.String) - SITE_URL | PAGE_URL",
+        "format": "siteUrl|pageUrl",
+        "type": "void"
+    },
+    "openSettingsMenu": {
+        "description": "Opens settings menu on a site.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "openUserProfile": {
+        "description": "Navigates to the user profile from the sites menu.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "useDiscoverabilityToNavigateTo": {
+        "description": "Navigates to another site from Sites Discoverability menu.",
+        "parameters": "sitename(java.lang.String) - SITE_NAME",
+        "format": "sitename",
+        "type": "void"
+    }
+}
