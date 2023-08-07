@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.object-form {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+}
+
+input[type="text"] {
+    width: 700px;
+}
+
+.object-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.json-output {
+    white-space: pre-wrap;
+    border: 2px solid #726f6ffd;
+    padding: 10px;
+}
