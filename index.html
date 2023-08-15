@@ -143,16 +143,16 @@
             <!-- Template for configuration parameter -->
             <template id="config-param-template">
                 <div class="form-field">
-                    <div style="flex-direction: row;">
-                        <div style="margin-right: 20px; margin-bottom: 20px; width: 20%;">
+                    <div style=" display: flex;flex-direction: row;">
+                        <div style="margin-right: 20px; margin-bottom: 20px; width: 30%;">
                             <label>Parameter Name</label>
                             <input type="text" class="config-param-name-input" style="margin-bottom: 10px;" />
                         </div>
-                        <div style="margin-left: 20px; margin-bottom: 20px; width: 70%;">
+                        <div style="margin-left: 20px; margin-bottom: 20px; width: 50%;">
                             <label>Parameter Value</label>
                             <input type="text" class="config-param-value-input" style="margin-bottom: 10px;" />
                         </div>
-                        <div style="margin-left: 40px; margin-top: 33px;" onclick="deleteConfigParam(this)">
+                        <div style="margin-left: 40px; margin-top: 33px; width: 20%;" onclick="deleteConfigParam(this)">
                             <button class="button-74-delete">Delete Parameter</button>
                         </div>
                     </div>
