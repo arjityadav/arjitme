@@ -507,6 +507,40 @@ function addObjectFromJSON(name, data) {
     nameInput.value = name || '';
     entryDiv.appendChild(nameInput);
 
+    // Create and populate locator dropdown
+    const locatorDropdown = document.createElement('select');
+    locatorDropdown.name = 'locator';
+    const options = ["select locator", "id", "class name", "tag name", "name", "link text", "partial link text", "css selector", "xpath"];
+    options.forEach(function (optionText) {
+        const option = document.createElement('option');
+        if (optionText === data.locator_name) {
+            option.value = optionText;
+            option.text = optionText;
+            option.selected = true;
+        } else if (optionText === 'select locator') {
+            option.text = optionText;
+        } else {
+            option.value = optionText;
+            option.text = optionText;
+        }
+        locatorDropdown.appendChild(option);
+    });
+    entryDiv.appendChild(locatorDropdown);
+
+    // Create and populate locator value input
+    const valueInput = document.createElement('input');
+    valueInput.type = 'text';
+    valueInput.placeholder = 'Locator value';
+    valueInput.value = data.locator_value || '';
+    entryDiv.appendChild(valueInput);
+
+    // Create and populate description input
+    const descriptionInput = document.createElement('input');
+    descriptionInput.type = 'text';
+    descriptionInput.placeholder = 'Description (optional)';
+    descriptionInput.value = data.description || '';
+    entryDiv.appendChild(descriptionInput);
+
     // ... Add other elements as needed ...
 
     container.appendChild(entryDiv);
