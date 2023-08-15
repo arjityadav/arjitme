@@ -160,8 +160,9 @@ function addConfigParam(addBtn) {
 
 // Function to delete a configuration parameter within a test action
 function deleteConfigParam(deleteBtn) {
-    const configParam = deleteBtn.parentNode;
-    configParam.parentNode.removeChild(configParam);
+    const configParam = deleteBtn.parentNode.parentNode;
+    const configParamsContainer = configParam.parentNode;
+    configParamsContainer.removeChild(configParam);
 }
 
 // Function to configure the action parameters based on selected action name and type
