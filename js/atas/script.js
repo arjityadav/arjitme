@@ -432,3 +432,149 @@ openModalButton.addEventListener('click', function () {
 closeModalButton.addEventListener('click', function () {
     modalOverlay.style.display = 'none';
 });
+
+const loadJSONLink = document.getElementById('load-json-link');
+
+loadJSONLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const jsonContent = e.target.result;
+                const jsonData = JSON.parse(jsonContent);
+
+                // Populate form fields with loaded JSON data
+                populateFormFromJSON(jsonData);
+            };
+            reader.readAsText(file);
+        }
+    });
+
+    fileInput.click(); // Trigger the file input dialog
+});
+
+function populateFormFromJSON(jsonData) {
+    const testsuiteNameInput = document.getElementById('testsuite-name');
+    const testsuiteOwnerInput = document.getElementById('testsuite-owner');
+    const objectContainer = document.getElementById('object-container');
+    const testItemsContainer = document.getElementById('test-items-container');
+
+    testsuiteNameInput.value = jsonData.testifact_info.testsuite_name || '';
+    testsuiteOwnerInput.value = jsonData.testifact_info.testsuite_owner || '';
+
+    // Clear existing objects and test items
+    objectContainer.innerHTML = '';
+    testItemsContainer.innerHTML = '';
+
+    // Populate object map
+    for (const objectName in jsonData.testifact_info.object_map_internal) {
+        const objectData = jsonData.testifact_info.object_map_internal[objectName];
+        addObjectFromJSON(objectName, objectData);
+    }
+
+    // Populate test items
+    for (const testItemData of jsonData.testifact_items) {
+        addTestItemFromJSON(testItemData);
+    }
+}
+
+function addObjectFromJSON(name, data) {
+    const container = document.getElementById('object-container');
+
+    const entryDiv = document.createElement('div');
+    entryDiv.className = 'object-entry';
+    entryDiv.style.border = '1px solid #ccc';
+    entryDiv.style.padding = '10px';
+
+    // Create and populate object ID heading
+    const objectIdHeading = document.createElement('h5');
+    objectIdHeading.className = 'object-id';
+    objectIdHeading.textContent = 'Object ' + currentObjectId;
+    objectIdHeading.style.fontWeight = 'bold';
+    entryDiv.appendChild(objectIdHeading);
+
+    // Create and populate object name input
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.placeholder = 'Object name';
+    nameInput.value = name || '';
+    entryDiv.appendChild(nameInput);
+
+    // ... Add other elements as needed ...
+
+    container.appendChild(entryDiv);
+
+    currentObjectId++;
+}
+
+function addTestItemFromJSON(testItemData) {
+    const testItemTemplate = document.querySelector('#test-item-template');
+    const testItemClone = testItemTemplate.content.cloneNode(true);
+    const testItemsContainer = document.querySelector('#test-items-container');
+    const testItemIndex = testItemsContainer.children.length + 1;
+    testItemClone.querySelector('.test-item-index').textContent = testItemIndex;
+
+    // Populate test item fields from JSON data
+    testItemClone.querySelector('.test-name-input').value = testItemData.test_name || '';
+    testItemClone.querySelector('.description-input').value = testItemData.description || '';
+    testItemClone.querySelector('.execute-input').value = testItemData.execute || '';
+
+    // ... Populate other test item fields ...
+
+    // Populate test actions
+    const testActionsContainer = testItemClone.querySelector('.test-actions-container');
+    const testActionsData = testItemData.test_actions || [];
+    for (const testActionData of testActionsData) {
+        addTestActionFromJSON(testActionData, testActionsContainer);
+    }
+
+    testItemsContainer.appendChild(testItemClone);
+}
+
+function addTestActionFromJSON(testActionData, parentContainer) {
+    const testActionTemplate = document.querySelector('#test-action-template');
+    const testActionClone = testActionTemplate.content.cloneNode(true);
+    const testActionIndex = parentContainer.children.length + 1;
+    testActionClone.querySelector('.test-action-index').textContent = testActionIndex;
+
+     // Populate test action fields from JSON data
+     const actionTypeSelect = testActionClone.querySelector('.action-type-input');
+     actionTypeSelect.value = testActionData.action_type || 'select_action_type'; // Set default value if not provided
+ 
+     // Trigger the 'change' event to populate the Action Name dropdown based on the selected Action Type
+     actionTypeSelect.dispatchEvent(new Event('change'));
+ 
+     const actionNameSelect = testActionClone.querySelector('.action-name-input');
+     actionNameSelect.value = testActionData.action_name || 'select_action_name'; // Set default value if not provided
+
+    // Populate configuration parameters
+    const configParamsContainer = testActionClone.querySelector('.config-params-container');
+    const configParamsData = testActionData.action_config || {};
+    for (const paramName in configParamsData) {
+        const paramValue = configParamsData[paramName];
+        addConfigParamFromJSON(paramName, paramValue, configParamsContainer);
+    }
+
+    parentContainer.appendChild(testActionClone);
+}
+
+function addConfigParamFromJSON(paramName, paramValue, parentContainer) {
+    const configParamTemplate = document.querySelector('#config-param-template');
+    const configParamClone = configParamTemplate.content.cloneNode(true);
+
+    // Populate configuration parameter fields from JSON data
+    const paramNameInput = configParamClone.querySelector('.config-param-name-input');
+    paramNameInput.value = paramName || '';
+
+    const paramValueInput = configParamClone.querySelector('.config-param-value-input');
+    paramValueInput.value = paramValue || '';
+
+    parentContainer.appendChild(configParamClone);
+}
