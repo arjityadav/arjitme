@@ -91,8 +91,8 @@ function updateObjectContainer() {
           <strong>Locator Value:</strong>
           <span>${object.locatorValue}</span>
         </div>
-        <button onclick="editObject(${index})">Edit</button>
-        <button onclick="deleteObject(${index})">Delete</button>
+        <button onclick="editObject(${index})" class="button-74" style="margin-right: 5px;">Edit</button>
+        <button onclick="deleteObject(${index})" class="button-74">Delete</button>
       `;
 
         objectDiv.innerHTML = objectInfo;
