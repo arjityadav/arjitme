@@ -28,21 +28,35 @@
                 <li>
                     <a href="encryption.html"><span class="fa fa-lock"></span> &nbsp;&nbsp;AES Encryption</a>
                 </li>
+                <li>
+                    <a href="" title="Work in Progress!" style="color: grey;" disabled>
+                        <span class="fa fa-superscript"></span> &nbsp;Variable Map Builder
+                    </a>
+                </li>
+                <li>
+                    <a href="" title="Work in Progress!" style="color: grey;" disabled>
+                        <span class="fa fa-file-text-o"></span> &nbsp;Template Builder
+                    </a>
+                </li>
             </ul>
         </nav>
 
         <!-- Page Content  -->
-        <div id="content" class="p-4 p-md-5">
+        <div id="content">
+            <div class="header">
+                <h1 style="color: white; text-align: center;">ATAS: Accelerated Test Automation Solution</h1>
+            </div>
+            <div style="padding: 25px;">
             <h1 class="mb-4"><strong>Test Script Builder <span style="color: red; font-size: 16px;"> v2.0</span></strong></h1>
             <form>
                 <div style="display: flex; flex-direction: row;">
                     <div style="margin-right: 20px; margin-bottom: 20px;">
-                        <label for="testsuite-name" style="font-size: 20px;">Testsuite Name</label>
+                        <label for="testsuite-name" style="font-size: 20px;">Testsuite Name*</label>
                         <input type="text" id="testsuite-name" name="testsuite_name" placeholder="Testsuite Name"
                             required="true">
                     </div>
                     <div style="margin-left: 20px; margin-bottom: 20px;">
-                        <label for="testsuite-owner" style="font-size: 20px;">Testsuite Owner</label>
+                        <label for="testsuite-owner" style="font-size: 20px;">Testsuite Owner*</label>
                         <input type="text" id="testsuite-owner" name="testsuite_owner" placeholder="Testsuite Owner">
                     </div>
                 </div>
@@ -185,6 +199,7 @@
             <pre id="json-container"></pre>
             <script src="js/atas/script.js"></script>
         </div>
+        </div>
     </div>
     </div>
 
@@ -192,7 +207,7 @@
         <footer>
             <p style="text-align: center; background-color: black; margin-bottom: auto; color: white;">
                 Copyright &copy;
-                <script>document.write(new Date().getFullYear());</script> Xebia Appcino | All rights reserved | Made with <i
+                <script>document.write(new Date().getFullYear());</script> <a>Xebia Appcino | All rights reserved | Made with <i
                     style="font-size:12px; color: red;" class="fa">&#xf004;</i> by Arjit</a>
             </p>
         </footer>
