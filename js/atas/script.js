@@ -376,7 +376,7 @@ function generateJSON() {
 
 function downloadJSON() {
     var json = document.getElementById("json-container").textContent;
-    var blob = new Blob([json], { type: "application/json" });
+    var blob = new Blob([json], { type: "text/plain" }); // Change the content type to text/plain
     var url = URL.createObjectURL(blob);
     if (!document.getElementById("testsuite-name").value || !document.getElementById("testsuite-owner").value) {
         alert("Test suite name and owner are mandatory fields. Please fill them.");
@@ -384,11 +384,12 @@ function downloadJSON() {
     }
     var a = document.createElement("a");
     a.href = url; // Set the correct URL generated from the Blob object
-    a.download = document.getElementById("testsuite-name").value + ".json";
+    a.download = document.getElementById("testsuite-name").value + "_json.txt"; // Change the file extension to .txt
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
 }
+
 
 function copyJSONToClipboard() {
     var json = document.getElementById("json-container").textContent;
@@ -541,7 +542,7 @@ function addObjectFromJSON(name, data) {
     descriptionInput.value = data.description || '';
     entryDiv.appendChild(descriptionInput);
 
-    // ... Add other elements as needed ...
+    // ... Continue adding code to populate other fields ...
 
     container.appendChild(entryDiv);
 
