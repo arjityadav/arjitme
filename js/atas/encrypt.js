@@ -1,5 +1,9 @@
 function encrypt() {
     var text = document.getElementById("text").value;
+    if (!text) {
+        alert("Text field cannot be empty");
+        return;
+    }
     var secretKey = "ThisIsASecretKey";
     var key = CryptoJS.enc.Utf8.parse(secretKey);
 

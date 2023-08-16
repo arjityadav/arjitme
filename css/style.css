@@ -41,6 +41,32 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
 
 html {
   font-family: sans-serif;
@@ -10325,7 +10351,7 @@ button.bg-dark:focus {
   }
 
   .p-md-5 {
-    padding: 3rem !important;
+    padding: 0rem !important;
   }
 
   .pt-md-5,
@@ -11833,7 +11859,7 @@ h5,
 #sidebar {
   min-width: 270px;
   max-width: 270px;
-  background: #000000f5;
+  background: black;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
