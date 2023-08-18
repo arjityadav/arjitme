@@ -41,6 +41,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .header {
   background-color: black;
   color: white;
@@ -11744,18 +11745,6 @@ body {
   color: gray;
 }
 
-.logo-image {
-  width: auto;
-  /* This will maintain the aspect ratio of the original image */
-  max-height: 300px;
-  /* Adjust the value to your desired logo height */
-  display: block;
-  /* Ensure the image behaves as a block element */
-  margin: -115px -45px;
-  /* Center the image horizontally */
-}
-
-
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -11857,14 +11846,21 @@ h5,
 }
 
 #sidebar {
-  min-width: 270px;
-  max-width: 270px;
+  min-width: 230px;
+  max-width: 230px;
   background: black;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
 }
+
+
 
 #sidebar.active {
   min-width: 80px;

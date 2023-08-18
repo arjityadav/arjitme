@@ -2,11 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>ATAS</title>
+    <title>ATAS - Accelerated Test Automation Solution</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/faviconD.ico" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/faviconL.ico" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="css/atas/header.css">
     <link rel="stylesheet" href="css/atas/styles-ome.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/atas/style2.css">
@@ -18,7 +21,7 @@
 <body>
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar" class="inactive">
-            <h1><a href="index.html" class="logo"><img src="images/logo.png" alt="ATAS Logo" class="logo-image"></a>
+            <h1><a href="index.html" class="logo"><img src="images/atas-logo-white.png" alt="ATAS Logo" class="logo-image"></a></h1>
             </h1>
             <ul class="list-unstyled components mb-5">
                 <li>
@@ -46,19 +49,22 @@
 
         <!-- Page Content  -->
         <div id="content">
-            <div class="header">
-                <h1 style="color: white; text-align: center;">ATAS: Accelerated Test Automation Solution</h1>
-            </div>
-            <div style="padding: 25px;">
-                <h1 class="mb-4"><strong>Object Map Builder <span style="color: red; font-size: 16px;">
-                            v1.0</span></strong></h1>
+                <div class="full-width-header">
+                    <h1 class="mb-4 header-text"><strong>Object Map Builder<span
+                                style="color: red; font-size: 16px;">
+                                v1.2</span></strong>
+                    </h1>
+                    <h1 class="logo-on-header"><a href="index.html" class="logo"><img src="images/atas_full_logo_black.png" alt="ATAS Logo"
+                                class="logo-header"></a></h1>
+                </div>
+                <div style="padding: 100px; padding-left: 250px;">
                 <div id="app">
                     <div class="object-form">
-                        <label>Object Name*</label>
+                        <label>Object Name <span style="color: red;">*</span></label>
                         <input type="text" id="objectName">
                     </div>
                     <div class="object-form">
-                        <label>Locator Name*</label>
+                        <label>Locator Name <span style="color: red;">*</span></label>
                         <select id="locatorName"></select>
                     </div>
                     <div id="xpathTypeContainer" class="object-form" style="display: none;">
@@ -66,7 +72,7 @@
                         <select id="xpathType"></select>
                     </div>
                     <div class="object-form">
-                        <label>Locator Value*</label>
+                        <label>Locator Value <span style="color: red;">*</span></label>
                         <input type="text" id="locatorValue">
                     </div>
                     <button onclick="addObject()" style="margin-bottom: 10px;" class="button-74">Add Object</button>

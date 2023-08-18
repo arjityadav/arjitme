@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>ATAS</title>
+    <title>ATAS - Accelerated Test Automation Solution</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/faviconD.ico" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/faviconL.ico" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="css/atas/header.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/atas/style2.css">
     <link rel="stylesheet" href="css/atas/searchMethods.css">
@@ -17,10 +19,12 @@
 
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar" class="inactive">
-            <h1><a href="index.html" class="logo"><img src="images/logo.png" alt="ATAS Logo" class="logo-image"></a></h1>
+            <h1><a href="index.html" class="logo"><img src="images/atas-logo-white.png" alt="ATAS Logo"
+                        class="logo-image"></a></h1>
             <ul class="list-unstyled components mb-5">
                 <li>
-                    <a style="font-weight: bold;" href="index.html"><span class="fa fa-cogs"></span> Test Script Builder</a>
+                    <a style="font-weight: bold;" href="index.html"><span class="fa fa-cogs"></span> Test Script
+                        Builder</a>
                 </li>
                 <li>
                     <a href="object-map-external.html"><span class="fa fa-object-group"></span> Object Map Builder</a>
@@ -43,162 +47,170 @@
 
         <!-- Page Content  -->
         <div id="content">
-            <div class="header">
-                <h1 style="color: white; text-align: center;">ATAS: Accelerated Test Automation Solution</h1>
+            <div class="full-width-header">
+                <h1 class="mb-4 header-text"><strong>Test Script Builder<span
+                            style="color: red; font-size: 16px;">
+                            v2.0</span></strong>
+                </h1>
+                <h1 class="logo-on-header"><a href="index.html" class="logo"><img src="images/atas_full_logo_black.png" alt="ATAS Logo"
+                            class="logo-header"></a></h1>
             </div>
-            <div style="padding: 25px;">
-            <h1 class="mb-4"><strong>Test Script Builder <span style="color: red; font-size: 16px;"> v2.0</span></strong></h1>
-            <form>
-                <div style="display: flex; flex-direction: row;">
-                    <div style="margin-right: 20px; margin-bottom: 20px;">
-                        <label for="testsuite-name" style="font-size: 20px;">Testsuite Name*</label>
-                        <input type="text" id="testsuite-name" name="testsuite_name" placeholder="Testsuite Name"
-                            required="true">
-                    </div>
-                    <div style="margin-left: 20px; margin-bottom: 20px;">
-                        <label for="testsuite-owner" style="font-size: 20px;">Testsuite Owner*</label>
-                        <input type="text" id="testsuite-owner" name="testsuite_owner" placeholder="Testsuite Owner">
-                    </div>
-                </div>
-            </form>
-            <div class="form-section">
-                <h3><strong>Object Map</strong></h3>
-                <div id="object-container"></div>
-                <button onclick="addObject()" class="button-74" style="margin-bottom: 8px;">Add Object</button>
-            </div>
-            <br>
-            <div id="test-items-form">
-                <div class="form-section">
-                    <h3><strong>Test Cases</strong></h3>
-                    <div id="test-items-container"></div>
-                    <button id="add-test-item-btn" onclick="addTestCase()" class="button-74"
-                        style="margin-bottom: 8px;">
-                        <span class="button-text">Add Test Case</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Template for test item -->
-            <template id="test-item-template">
-                <div class="form-section">
-                    <h5 style="margin-bottom: 20px; font-weight: bold;">Test Case <span class="test-item-index"></span>
-                    </h5>
+            <div style="padding: 100px; padding-left: 250px;">
+                <form>
                     <div style="display: flex; flex-direction: row;">
-                        <div class="form-field">
-                            <div style="margin-right: 20px;margin-bottom: 20px;">
-                                <label>Test Case Name</label>
-                                <input type="text" class="test-name-input" />
+                        <div style="margin-right: 20px; margin-bottom: 20px;">
+                            <label for="testsuite-name" style="font-size: 16px;">Testsuite Name <span style="color: red;">*</span></label>
+                            <input type="text" id="testsuite-name" name="testsuite_name" placeholder="Testsuite Name"
+                                required="true">
+                        </div>
+                        <div style="margin-left: 20px; margin-bottom: 20px;">
+                            <label for="testsuite-owner" style="font-size: 16px;">Testsuite Owner <span style="color: red;">*</span></label>
+                            <input type="text" id="testsuite-owner" name="testsuite_owner"
+                                placeholder="Testsuite Owner">
+                        </div>
+                    </div>
+                </form>
+                <div class="form-section">
+                    <h3><strong>Object Map</strong></h3>
+                    <div id="object-container"></div>
+                    <button onclick="addObject()" class="button-74" style="margin-bottom: 8px;">Add Object</button>
+                </div>
+                <br>
+                <div id="test-items-form">
+                    <div class="form-section">
+                        <h3><strong>Test Cases</strong></h3>
+                        <div id="test-items-container"></div>
+                        <button id="add-test-item-btn" onclick="addTestCase()" class="button-74"
+                            style="margin-bottom: 8px;">
+                            <span class="button-text">Add Test Case</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Template for test item -->
+                <template id="test-item-template">
+                    <div class="form-section">
+                        <h5 style="margin-bottom: 20px; font-weight: bold;">Test Case <span
+                                class="test-item-index"></span>
+                        </h5>
+                        <div style="display: flex; flex-direction: row;">
+                            <div class="form-field">
+                                <div style="margin-right: 20px;margin-bottom: 20px;">
+                                    <label>Test Case Name</label>
+                                    <input type="text" class="test-name-input" />
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <div style="margin-left: 20px; margin-right: 20px; margin-bottom: 20px;">
+                                    <label>Test Description</label>
+                                    <input type="text" class="description-input"></input>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <div style="margin-left: 20px; margin-bottom: 20px;">
+                                    <label>Test Execute</label>
+                                    <select class="execute-input">
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-field">
-                            <div style="margin-left: 20px; margin-right: 20px; margin-bottom: 20px;">
-                                <label>Test Description</label>
-                                <input type="text" class="description-input"></input>
+                        <div class="test-actions-container"></div>
+                        <button onclick="addTestAction(this)" class="button-74">
+                            + Test Action</button>
+                        <button onclick="deleteTestCase(this)" class="button-74" style="margin-left: 5px;"> x Test
+                            Case</button>
+                    </div>
+                </template>
+
+                <!-- Template for test action -->
+                <template id="test-action-template">
+                    <div class="action-field">
+                        <h4>Action ID&nbsp;<span class="test-action-index"></span></h4>
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="margin-right: 20px;" class="form-field" onchange="toggleActionNameField(this)">
+                                <label>Action Type</label>
+                                <select class="action-type-input">
+                                    <option value="select_action_type">Select Action Type</option>
+                                    <option value="ui">ui</option>
+                                    <option value="api">api</option>
+                                    <option value="file_system">file system</option>
+                                </select>
                             </div>
-                        </div>
-                        <div class="form-field">
-                            <div style="margin-left: 20px; margin-bottom: 20px;">
-                                <label>Test Execute</label>
-                                <select class="execute-input">
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
+                            <div style="margin-right: 20px;" class="form-field">
+                                <label>Action Name</label>
+                                <select class="action-name-input" onchange="configureActionParams(this)">
+                                    <option value="select_action_name">Select Action</option>
+                                    <option value="ui_open_browser">ui_open_browser</option>
+                                    <option value="ui_appian_open_browser">ui_appian_open_browser</option>
+                                    <option value="ui_appian_action">ui_appian_action</option>
+                                    <option value="ui_navigate">ui_navigate</option>
+                                    <option value="ui_input">ui_input</option>
+                                    <option value="ui_click">ui_click</option>
+                                    <option value="ui_verify_css_property">ui_verify_css_property</option>
+                                    <option value="ui_verify_text">ui_verify_text</option>
+                                    <option value="ui_close_browser">ui_close_browser</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="config-params-container"></div>
+                        <button onclick="addConfigParam(this)" class="button-74">+ Optional Parameter</button>
+                        <button onclick="deleteTestAction(this)" class="button-74">x Test Action</button>
+                        <div style="margin-left: 50%; margin-top:0px;" class="move-action-btns">
+                            <button onclick="moveTestActionUp(this)" title="Move this step up" class="button-74">▲</button>
+                            <button onclick="moveTestActionDown(this)" class="button-74">▼</button>
+                        </div>
                     </div>
-                    <div class="test-actions-container"></div>
-                    <button onclick="addTestAction(this)" class="button-74">
-                        + Test Action</button>
-                    <button onclick="deleteTestCase(this)" class="button-74" style="margin-left: 5px;"> x Test
-                        Case</button>
-                </div>
-            </template>
+                </template>
 
-            <!-- Template for test action -->
-            <template id="test-action-template">
-                <div class="action-field">
-                    <h4>Action ID&nbsp;<span class="test-action-index"></span></h4>
-                    <div style="display: flex; flex-direction: row;">
-                        <div style="margin-right: 20px;" class="form-field" onchange="toggleActionNameField(this)">
-                            <label>Action Type</label>
-                            <select class="action-type-input">
-                                <option value="select_action_type">Select Action Type</option>
-                                <option value="ui">ui</option>
-                                <option value="api">api</option>
-                                <option value="file_system">file system</option>
-                            </select>
-                        </div>
-                        <div style="margin-right: 20px;" class="form-field">
-                            <label>Action Name</label>
-                            <select class="action-name-input" onchange="configureActionParams(this)">
-                                <option value="select_action_name">Select Action</option>
-                                <option value="ui_open_browser">ui_open_browser</option>
-                                <option value="ui_appian_open_browser">ui_appian_open_browser</option>
-                                <option value="ui_appian_action">ui_appian_action</option>
-                                <option value="ui_navigate">ui_navigate</option>
-                                <option value="ui_input">ui_input</option>
-                                <option value="ui_click">ui_click</option>
-                                <option value="ui_verify_css_property">ui_verify_css_property</option>
-                                <option value="ui_verify_text">ui_verify_text</option>
-                                <option value="ui_close_browser">ui_close_browser</option>
-                            </select>
+                <!-- Template for configuration parameter -->
+                <template id="config-param-template">
+                    <div class="form-field">
+                        <div style=" display: flex;flex-direction: row;">
+                            <div style="margin-right: 20px; margin-bottom: 20px; width: 30%;">
+                                <label>Parameter Name</label>
+                                <input type="text" class="config-param-name-input" style="margin-bottom: 10px;" />
+                            </div>
+                            <div style="margin-left: 20px; margin-bottom: 20px; width: 50%;">
+                                <label>Parameter Value</label>
+                                <input type="text" class="config-param-value-input" style="margin-bottom: 10px;" />
+                            </div>
+                            <div style="margin-left: 40px; margin-top: 33px; width: 20%;"
+                                onclick="deleteConfigParam(this)">
+                                <button class="button-74">Delete Parameter</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="config-params-container"></div>
-                    <button onclick="addConfigParam(this)" class="button-74">+ Optional Parameter</button>
-                    <button onclick="deleteTestAction(this)" class="button-74">x Test Action</button>
-                    <div style="margin-left: 20px; margin-top:0px;" class="move-action-btns">
-                        <button onclick="moveTestActionUp(this)">▲</button>
-                        <button onclick="moveTestActionDown(this)">▼</button>
-                    </div>
-                </div>
-            </template>
+                </template>
+                <br><br>
+                <button onclick="generateJSON()" class="button-74">Generate JSON Script</button>
+                <button id="download-btn" onclick="downloadJSON()" class="button-74"
+                    style="display: none; margin-left: 5px;">Download JSON Script</button>
+                <button id="copy-btn" onclick="copyJSONToClipboard()" style="display: none; margin-left: 5px;"
+                    class="button-74">Copy JSON Script</button>
+                <button id="searchButton" class="button-74" style="margin-left: 5px;">Search Appian
+                    Methods</button><br><br>
+                <a href="#" id="load-json-link"><u>Edit an already existing Test Script?</u></a>
 
-            <!-- Template for configuration parameter -->
-            <template id="config-param-template">
-                <div class="form-field">
-                    <div style=" display: flex;flex-direction: row;">
-                        <div style="margin-right: 20px; margin-bottom: 20px; width: 30%;">
-                            <label>Parameter Name</label>
-                            <input type="text" class="config-param-name-input" style="margin-bottom: 10px;" />
-                        </div>
-                        <div style="margin-left: 20px; margin-bottom: 20px; width: 50%;">
-                            <label>Parameter Value</label>
-                            <input type="text" class="config-param-value-input" style="margin-bottom: 10px;" />
-                        </div>
-                        <div style="margin-left: 40px; margin-top: 33px; width: 20%;" onclick="deleteConfigParam(this)">
-                            <button class="button-74">Delete Parameter</button>
-                        </div>
+                <!-- Modal overlay and box content -->
+                <div class="modal-overlay" id="modalOverlay">
+                    <div class="modal-box">
+                        <span class="close-button" id="closeModalButton">&times;</span>
+                        <!-- You can put the content of the modal page here -->
+                        <h1>Appian Method Search</h1>
+                        <form id="searchForm">
+                            <input type="text" id="searchInput" placeholder="Enter keywords to search">
+                            <!-- <ul id="suggestionList"></ul> -->
+                        </form>
+                        <div id="results"></div>
+                        <script src="js/atas/searchMethods.js"></script>
                     </div>
                 </div>
-            </template>
-            <br><br>
-            <button onclick="generateJSON()" class="button-74">Generate JSON Script</button>
-            <button id="download-btn" onclick="downloadJSON()" class="button-74"
-                style="display: none; margin-left: 5px;">Download JSON Script</button>
-            <button id="copy-btn" onclick="copyJSONToClipboard()" style="display: none; margin-left: 5px;"
-                class="button-74">Copy JSON Script</button>
-            <button id="searchButton" class="button-74" style="margin-left: 5px;">Search Appian Methods</button><br><br>
-            <a href="#" id="load-json-link"><u>Edit an already existing Test Script?</u></a>
 
-            <!-- Modal overlay and box content -->
-            <div class="modal-overlay" id="modalOverlay">
-                <div class="modal-box">
-                    <span class="close-button" id="closeModalButton">&times;</span>
-                    <!-- You can put the content of the modal page here -->
-                    <h1>Appian Method Search</h1>
-                    <form id="searchForm">
-                        <input type="text" id="searchInput" placeholder="Enter keywords to search">
-                        <!-- <ul id="suggestionList"></ul> -->
-                    </form>
-                    <div id="results"></div>
-                    <script src="js/atas/searchMethods.js"></script>
-                </div>
+                <pre id="json-container"></pre>
+                <script src="js/atas/script.js"></script>
             </div>
-
-            <pre id="json-container"></pre>
-            <script src="js/atas/script.js"></script>
-        </div>
         </div>
     </div>
     </div>
@@ -207,8 +219,8 @@
         <footer>
             <p style="text-align: center; background-color: black; margin-bottom: auto; color: white;">
                 Copyright &copy;
-                <script>document.write(new Date().getFullYear());</script> <a>Xebia Appcino | All rights reserved | Made with <i
-                    style="font-size:12px; color: red;" class="fa">&#xf004;</i> by Arjit</a>
+                <script>document.write(new Date().getFullYear());</script> <a>Xebia Appcino | All rights reserved | Made
+                    with <i style="font-size:12px; color: red;" class="fa">&#xf004;</i> by Arjit</a>
             </p>
         </footer>
     </div>

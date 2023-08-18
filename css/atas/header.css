@@ -1,0 +1,41 @@
+.logo-image {
+    width: auto;
+    /* This will maintain the aspect ratio of the original image */
+    max-height: 50px;
+    /* Adjust the value to your desired logo height */
+    display: block;
+    /* Ensure the image behaves as a block element */
+    margin: 10px 60px;
+    margin-bottom: -5px;
+    /* Center the image horizontally */
+}
+
+.logo-header {
+    max-height:60px;
+    width: auto;
+}
+
+.header-text{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.logo-on-header{
+    margin-right: 20px;
+    margin-top:5px
+}
+
+.full-width-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 230px;
+    right: 0;
+    height: 70px;
+    background-color: white;
+    /* You can change the background color as needed */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
