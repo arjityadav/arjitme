@@ -73,7 +73,7 @@ function addObject() {
 
     var deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
-    deleteButton.className = "button-74-delete";
+    deleteButton.className = "button-74";
     deleteButton.onclick = function () {
         container.removeChild(entryDiv);
         var remainingObjects = document.getElementsByClassName("object-entry");
