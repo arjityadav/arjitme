@@ -244,3 +244,25 @@ h4 {
     color: red;
     /* Optionally, change the color when hovering */
 }
+
+.collapse-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.collapse-icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.test-case-details {
+    margin-top: 10px;
+}
+
+.collapsed-test-case {
+    display: none;
+}

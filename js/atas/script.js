@@ -130,7 +130,7 @@ function addTestCase() {
 
 // Function to delete a test item
 function deleteTestCase(deleteBtn) {
-    const testItem = deleteBtn.parentNode;
+    const testItem = deleteBtn.parentNode.parentNode;
     testItem.parentNode.removeChild(testItem);
 }
 
@@ -457,7 +457,6 @@ loadJSONLink.addEventListener('click', function(event) {
             reader.readAsText(file);
         }
     });
-
     fileInput.click(); // Trigger the file input dialog
 });
 
@@ -612,4 +611,22 @@ function addConfigParamFromJSON(paramName, paramValue, parentContainer) {
     paramValueInput.value = paramValue || '';
 
     parentContainer.appendChild(configParamClone);
+}
+
+function toggleTestCaseDetails(button) {
+    const testCaseDetails = button.closest('.form-section').querySelector('.test-case-details');
+    const collapseIcon = button.querySelector('.collapse-icon');
+    const collapseTestCaseName = button.querySelector('.collapse-test-case-name');
+    var testCaseNameInput = button.closest(".form-section").querySelector(".test-name-input");
+
+    if (testCaseDetails.style.display === 'none') {
+        testCaseDetails.style.display = 'block';
+        collapseIcon.textContent = '▼';
+        collapseTestCaseName.textContent = "";
+
+    } else {
+        testCaseDetails.style.display = 'none';
+        collapseIcon.textContent = '►';
+        collapseTestCaseName.textContent = testCaseNameInput.value;
+    }
 }
