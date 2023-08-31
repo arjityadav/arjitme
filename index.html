@@ -48,23 +48,24 @@
         <!-- Page Content  -->
         <div id="content">
             <div class="full-width-header">
-                <h1 class="mb-4 header-text"><strong>Test Script Builder<span
-                            style="color: red; font-size: 16px;">
+                <h1 class="mb-4 header-text"><strong>Test Script Builder<span style="color: red; font-size: 16px;">
                             v2.0</span></strong>
                 </h1>
-                <h1 class="logo-on-header"><a href="index.html" class="logo"><img src="images/atas_full_logo_black.png" alt="ATAS Logo"
-                            class="logo-header"></a></h1>
+                <h1 class="logo-on-header"><a href="index.html" class="logo"><img src="images/atas_full_logo_black.png"
+                            alt="ATAS Logo" class="logo-header"></a></h1>
             </div>
             <div style="padding: 100px; padding-left: 250px;">
                 <form>
                     <div style="display: flex; flex-direction: row;">
                         <div style="margin-right: 20px; margin-bottom: 20px;">
-                            <label for="testsuite-name" style="font-size: 16px;">Testsuite Name <span style="color: red;">*</span></label>
+                            <label for="testsuite-name" style="font-size: 16px;">Testsuite Name <span
+                                    style="color: red;">*</span></label>
                             <input type="text" id="testsuite-name" name="testsuite_name" placeholder="Testsuite Name"
                                 required="true">
                         </div>
                         <div style="margin-left: 20px; margin-bottom: 20px;">
-                            <label for="testsuite-owner" style="font-size: 16px;">Testsuite Owner <span style="color: red;">*</span></label>
+                            <label for="testsuite-owner" style="font-size: 16px;">Testsuite Owner <span
+                                    style="color: red;">*</span></label>
                             <input type="text" id="testsuite-owner" name="testsuite_owner"
                                 placeholder="Testsuite Owner">
                         </div>
@@ -92,35 +93,38 @@
                     <div class="form-section">
                         <h5 style="margin-bottom: 20px; font-weight: bold;">Test Case <span
                                 class="test-item-index"></span>
+                            <button class="collapse-button" onclick="toggleTestCaseDetails(this)">
+                                <span class="collapse-icon">▼</span> <span class="collapse-test-case-name"></span><span
+                                    class="test-item-index"></span>
+                            </button>
                         </h5>
-                        <div style="display: flex; flex-direction: row;">
+                        <div class="test-case-details" id="test-case">
                             <div class="form-field">
-                                <div style="margin-right: 20px;margin-bottom: 20px;">
-                                    <label>Test Case Name</label>
-                                    <input type="text" class="test-name-input" />
+                                <div style="display: flex; flex-direction: row;">
+                                    <div style="margin-right: 20px; margin-bottom: 20px; width: 45%;">
+                                        <label>Test Case Name</label>
+                                        <input type="text" class="test-name-input" />
+                                    </div>
+                                    <div style="margin-left: 10px; margin-right: 20px; margin-bottom: 20px; width: 35%;">
+                                        <label>Test Description</label>
+                                        <input type="text" class="description-input"></input>
+                                    </div>
+
+                                    <div style="margin-left: 10px; margin-bottom: 20px; width: 10%;">
+                                        <label>Test Execute</label>
+                                        <select class="execute-input">
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-field">
-                                <div style="margin-left: 20px; margin-right: 20px; margin-bottom: 20px;">
-                                    <label>Test Description</label>
-                                    <input type="text" class="description-input"></input>
-                                </div>
-                            </div>
-                            <div class="form-field">
-                                <div style="margin-left: 20px; margin-bottom: 20px;">
-                                    <label>Test Execute</label>
-                                    <select class="execute-input">
-                                        <option value="yes">Yes</option>
-                                        <option value="no">No</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <div class="test-actions-container"></div>
+                            <button onclick="addTestAction(this)" class="button-74">
+                                + Test Action</button>
+                            <button onclick="deleteTestCase(this)" class="button-74" style="margin-left: 5px;"> x Test
+                                Case</button>
                         </div>
-                        <div class="test-actions-container"></div>
-                        <button onclick="addTestAction(this)" class="button-74">
-                            + Test Action</button>
-                        <button onclick="deleteTestCase(this)" class="button-74" style="margin-left: 5px;"> x Test
-                            Case</button>
                     </div>
                 </template>
 
@@ -158,7 +162,8 @@
                         <button onclick="addConfigParam(this)" class="button-74">+ Optional Parameter</button>
                         <button onclick="deleteTestAction(this)" class="button-74">x Test Action</button>
                         <div style="margin-left: 50%; margin-top:0px;" class="move-action-btns">
-                            <button onclick="moveTestActionUp(this)" title="Move this step up" class="button-74">▲</button>
+                            <button onclick="moveTestActionUp(this)" title="Move this step up"
+                                class="button-74">▲</button>
                             <button onclick="moveTestActionDown(this)" class="button-74">▼</button>
                         </div>
                     </div>
@@ -219,7 +224,8 @@
         <footer>
             <p style="text-align: center; background-color: black; margin-bottom: auto; color: white;">
                 Copyright &copy;
-                <script>document.write(new Date().getFullYear());</script> <a>Xebia Appcino | All rights reserved | Designed by Arjit</a>
+                <script>document.write(new Date().getFullYear());</script> <a>Xebia Appcino | All rights reserved |
+                    Designed by Arjit</a>
             </p>
         </footer>
     </div>
