@@ -222,8 +222,8 @@ function configureActionParams(actionNameSelect) {
             ];
         } else if (actionName === 'ui_appian_action') {
             configParams = [
-                { name: 'method_name', label: 'Method Name', dropdown: ['open', 'loginWithUsername', 'waitForProgressBar'] },
-                { name: 'method_argument', label: 'Method Argument' },
+                { name: 'method_name', label: 'Method Name', dropdown: ['loginWithTermsWithUsernameAndPassword', 'waitForSeconds', 'populateFieldWithValue'] },
+                { name: 'method_argument', label: 'Method Argument'},
                 { name: 'method_type', label: 'Method Type' }
             ];
         }
@@ -243,6 +243,18 @@ function configureActionParams(actionNameSelect) {
         const paramValueInput = paramClone.querySelector('.config-param-value-input');
         paramNameInput.value = param.name;
         paramNameInput.setAttribute('placeholder', param.label);
+        if (param.dropdown) {
+            // Create a dropdown select element
+            const dropdownSelect = document.createElement('select');
+            dropdownSelect.className = 'config-param-value-input';
+            for (const optionValue of param.dropdown) {
+                const option = document.createElement('option');
+                option.value = optionValue;
+                option.textContent = optionValue;
+                dropdownSelect.appendChild(option);
+            }
+            paramClone.querySelector('.config-param-value-input').replaceWith(dropdownSelect);
+        }
         configParamsContainer.appendChild(paramClone);
     }
 

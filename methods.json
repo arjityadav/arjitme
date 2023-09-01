@@ -11,21 +11,162 @@
         "parameters": "webDriver(org.openqa.selenium.WebDriver) - The web driver defined in the external framework.",
         "type": "void"
     },
+    "setupSeleniumWebDriverWithBrowser": {
+        "description": "Starts selenium browser",
+        "parameters": "browser(String) - Browser to test with, currently supports FIREFOX, CHROME, IE",
+        "type": "void"
+    },
+    "setupWithBrowser": {
+        "description": "Starts selenium browser",
+        "parameters": "browser(String) - Browser to test with, currently supports FIREFOX, CHROME, IE",
+        "type": "void"
+    },
+    "deleteFile": {
+        "description": "Deletes a file from the downloads directory",
+        "parameters": "filename(String) - Filename to delete out of the download directory",
+        "type": "void"
+    },
+    "setAppianUrlTo": {
+        "description": "Sets the default appian url.",
+        "parameters": "url(String) - Url for Appian site, e.g. https://forum.appian.com/suite",
+        "type": "void"
+    },
+    "setAppianVersionTo": {
+        "description": "Sets the default appian version.",
+        "parameters": "version(String) - Version for Appian site, e.g. 16.1",
+        "type": "void"
+    },
+    "setAppianLocaleTo": {
+        "description": "Sets the Appian locale. This is useful so that test cases will work in different geographic regions that format date and time differently.",
+        "parameters": "locale(String) - Appian locale (en_US or en_GB)",
+        "type": "void"
+    },
+    "setStartDatetime": {
+        "description": "Sets the start datetime with which all of the relative dates and datetimes will be calculated.",
+        "parameters": "",
+        "format": "",
+        "type": "void"
+    },
+    "setDataSourceNameTo": {
+        "description": "Sets the datasource name",
+        "parameters": "dataSourceName(String) - Name of the data source",
+        "type": "void"
+    },
+    "setTimeoutSecondsTo": {
+        "description": "Sets the global timeout seconds that are used for each implicit wait.",
+        "parameters": "ts(Integer) - Timeout seconds",
+        "format": "ts",
+        "type": "void"
+    },
+    "setScreenshotPathTo": {
+        "description": "Sets the path on the automated test server where screenshots will be placed.",
+        "parameters": "path(String) - Path to save screen shots",
+        "type": "void"
+    },
+    "setStopOnErrorTo": {
+        "description": "Set the flag to stop FitNesse on error. If true, FitNesse will quit on the first failed test. This will also quit the WebDriver as well.",
+        "parameters": "bool(Boolean) - true or false",
+        "format": "bool",
+        "type": "void"
+    },
+    "setTakeErrorScreenshotsTo": {
+        "description": "Set the flag to take screenshots on errors. If true, every error in an automated test will trigger a screenshot to be placed in setScreenshotPathTo(String).",
+        "parameters": "bool(Boolean) - true or false",
+        "format": "bool",
+        "type": "void"
+    },
+    "open": {
+        "description": "Navigate to a particular url.",
+        "parameters": "url(String) - Url to navigate to",
+        "type": "void"
+    },
+    "resizeWindowWidthHeight": {
+        "description": "Resize browser window.",
+        "parameters": "width(Integer) - Width for window, height(Integer) - Height for window",
+        "format": "width|height",
+        "type": "void"
+    },
+    "clickOnXAndYCoordinatesOnMonitor": {
+        "description": "Click on the x and y coordinate on monitor.",
+        "parameters": "x(Integer) - X coordinate on the primary monitor, y(Integer) - Y coordinate on the primary monitor",
+        "format": "x|y",
+        "type": "void"
+    },
+    "takeScreenshot": {
+        "description": "Take a screenshot and place it in the directory defined by: setScreenshotPathTo(String).",
+        "parameters": "fileName(String) - File name for new screenshot",
+        "type": "void"
+    },
+    "loginIntoWithUsernameAndPassword": {
+        "description": "Login to Appian.",
+        "parameters": "url(String) - Url of Appian site, userName(String) - Appian username, password(String) - Appian password",
+        "format": "url|userName|password",
+        "type": "void"
+    },
+    "loginWithUsernameAndPassword": {
+        "description": "Login to Appian.",
+        "parameters": "userName(String) - Appian username, password(String) - Appian password",
+        "format": "userName|password",
+        "type": "void"
+    },
+    "loginIntoWithUsername": {
+        "description": "Login to Appian using users.properties.",
+        "parameters": "url(String) - Appian url, username(String) - Appian username, must match username in users.properties",
+        "format": "url|username",
+        "type": "void"
+    },
+    "loginWithUsername": {
+        "description": "Login to Appian using users.properties.",
+        "parameters": "username(String) - Appian username, must match username in users.properties",
+        "type": "void"
+    },
+    "loginIntoWithRole": {
+        "description": "Login to Appian using roles.properties.",
+        "parameters": "url(String) - Appian url, role(String) - Role matching role in users.properties",
+        "format": "url|role",
+        "type": "void"
+    },
+    "loginWithRole": {
+        "description": "Login to Appian using roles.properties.",
+        "parameters": "role(String) - Role matching role in users.properties",
+        "type": "void"
+    },
+    "loginWithTermsWithUsernameAndPassword": {
+        "description": "Login to an Appian site containing terms and conditions.",
+        "parameters": "userName(String) - Appian username, password(String) - Appian password",
+        "format": "userName|password",
+        "type": "void"
+    },
+    "loginWithTermsWithUsername": {
+        "description": "Login to an Appian site containing terms and conditions.",
+        "parameters": "userName(String) - Appian username",
+        "type": "void"
+    },
+    "loginWithTermsWithRole": {
+        "description": "Login to an Appian site containing terms and conditions.",
+        "parameters": "role(String) - Role matching role in users.properties",
+        "type": "void"
+    },
+    "waitFor": {
+        "description": "Waits for a particular period of time.",
+        "parameters": "period(String) - Period of time, e.g. 5 minutes, 1 hour, 10 seconds",
+        "type": "void"
+    },
     "waitForSeconds": {
         "description": "Waits for X seconds.",
-        "parameters": "period(java.lang.Integer) - Number of seconds to wait for",
+        "parameters": "period(Integer) - Number of seconds to wait for",
         "format": "period",
         "type": "void"
     },
     "waitForMinutes": {
         "description": "Waits for X minutes.",
-        "parameters": "period(java.lang.Integer) - Number of minutes to wait for",
+        "parameters": "period(Integer) - Number of minutes to wait for",
         "format": "period",
         "type": "void"
     },
     "waitForHours": {
         "description": "Wait for X hours.",
-        "parameters": "period(java.lang.Integer) - Number of hours to wait for",
+        "parameters": "period(Integer) - Number of hours to wait for",
         "format": "period",
         "type": "void"
     },
@@ -36,16 +177,50 @@
         "type": "void"
     },
     "waitForProgressBar": {
-        "description": "Waits for Progerss Bar to disappear",
+        "description": "Waits for Progress Bar to disappear",
         "parameters": "",
         "format": "",
         "type": "void"
     },
     "waitUntil": {
         "description": "Waits until a particular datetime",
-        "parameters": "datetime(java.lang.String) - Datetime string must match yyyy-mm-dd HH:mm",
-        "format": "datetime",
+        "parameters": "datetime(String) - Datetime string must match yyyy-mm-dd HH:mm",
         "type": "void"
+    },
+    "getWebApiWithUsername": {
+        "description": "Calls a web api and returns result",
+        "parameters": "webApiEndpoint(String) - Web api endpoint, not including url, username(String) - Appian username",
+        "format": "webApiEndpoint|username",
+        "returns": "WebAPI response"
+    },
+    "getWebApiWithRole": {
+        "description": "Calls a web api and returns result",
+        "parameters": "webApiEndpoint(String) - Web api endpoint, not including url, role(String) - Role matching role in users.properties",
+        "format": "webApiEndpoint|role",
+        "returns": "WebAPI response"
+    },
+    "postWebApiWithBodyWithUsername": {
+        "description": "Calls a web api and returns result",
+        "parameters": "webApiEndpoint(String) - Web api endpoint, not including url, body(String) - Body to send in POST, username(String) - Appian username",
+        "format": "webApiEndpoint|body|username",
+        "returns": "WebAPI response"
+    },
+    "postWebApiWithBodyWithRole": {
+        "description": "Calls a web api and returns result",
+        "parameters": "webApiEndpoint(String) - Web api endpoint, not including url, body(String) - Body to send in POST, role(String) - Role matching role in users.properties",
+        "format": "webApiEndpoint|body|role",
+        "returns": "WebAPI response"
+    },
+    "setTestVariableWith": {
+        "description": "Sets test variables",
+        "parameters": "key(String) - Test variable key, val(String) - JSON string containing variable data",
+        "format": "key|val",
+        "type": "void"
+    },
+    "getTestVariable": {
+        "description": "Get test variable",
+        "parameters": "variableName(String) - Name for saved variable",
+        "returns": "Variable data"
     },
     "refresh": {
         "description": "Refreshes page",
@@ -61,33 +236,52 @@
     },
     "getRandomString": {
         "description": "Returns a random string of a specific length",
-        "parameters": "length(int) - Length of random string",
+        "parameters": "length(Integer) - Length of random string",
         "format": "length",
-        "type": "java.lang.String"
+        "returns": "Random alphanumeric string"
     },
     "getRandomAlphabetString": {
         "description": "Returns a random alphabetic string of a specific length",
-        "parameters": "length(int) - Length of random alphabet string",
+        "parameters": "length(Integer) - Length of random alphabet string",
         "format": "length",
-        "type": "java.lang.String"
+        "returns": "Random alphabet string"
     },
     "getRandomIntegerFromTo": {
         "description": "Returns a random integer of a specific length",
-        "parameters": "min(int), max(int) - Minimum and Maximum of random integer",
+        "parameters": "min(Integer) - Minimum of random integer, max(Integer) - Maximum of random integer",
         "format": "min|max",
-        "type": "int"
+        "returns": "Random integer between the min and max"
     },
     "getRandomDecimalFromTo": {
-        "description": "Returns a random decimal of a specific length",
-        "parameters": "min(double), max(double) - Minimum and Maximum of random decimal",
+        "description": "Returns a random integer of a specific length",
+        "parameters": "min(Double) - Minimum of random decimal, max(Double) - Maximum of random decimal",
         "format": "min|max",
-        "type": "double"
+        "returns": "Random decimal between the min and max"
     },
     "getRandomDecimalFromToWith": {
-        "description": "Returns a random decimal of a specific length",
-        "parameters": "min(double), max(double), decimalPlaces(int) - Minimum and Maximum of random decimal, Number of decimal places to display",
+        "description": "Returns a random integer of a specific length",
+        "parameters": "min(Double) - Minimum of random decimal, max(Double) - Maximum of random decimal, decimalPlaces(Integer) - Number of integers after the decimal places to display",
         "format": "min|max|decimalPlaces",
-        "type": "double"
+        "returns": "Random decimal between the min and max with a certain number of decimal places"
+    },
+    "getSettings": {
+        "description": "Get settings",
+        "returns": "com.appiancorp.ps.automatedtest.common.Settings object"
+    },
+    "setSettings": {
+        "description": "Set settings",
+        "parameters": "settings(com.appiancorp.ps.automatedtest.common.Settings) - Settings object",
+        "type": "void"
+    },
+    "canSendUrlEvent": {
+        "description": "Determines if a URL can be sent",
+        "returns": "true if the URL event has already been sent"
+    },
+    "preventFutureEvents": {
+        "description": "Prevents future metrics from getting logged",
+        "parameters": "",
+        "format": "",
+        "type": "void"
     },
     "acceptTask": {
         "description": "Accepts a task if the task can be accepted.",
