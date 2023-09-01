@@ -222,7 +222,7 @@ function configureActionParams(actionNameSelect) {
             ];
         } else if (actionName === 'ui_appian_action') {
             configParams = [
-                { name: 'method_name', label: 'Method Name', dropdown: ['loginWithTermsWithUsernameAndPassword', 'waitForSeconds', 'populateFieldWithValue'] },
+                { name: 'method_name', label: 'Method Name', dropdown: ['loginWithTermsWithUsernameAndPassword', 'waitForSeconds', 'populateFieldWithValue','clickOnButton','clickOnCheckboxOption'] },
                 { name: 'method_argument', label: 'Method Argument'},
                 { name: 'method_type', label: 'Method Type' }
             ];
