@@ -764,12 +764,6 @@
         "format": "sectionName",
         "type": "java.lang.String"
     },
-    "logout": {
-        "description": "Logs out of Appian.",
-        "parameters": "",
-        "format": "",
-        "type": "void"
-    },
     "populateDropdownSearchBoxWith": {
         "description": "Selects a value in a search dropdown.",
         "parameters": "fieldName(java.lang.String), searchValue(java.lang.String) - FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX] | VALUE",

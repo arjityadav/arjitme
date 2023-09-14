@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>ATAS - Accelerated Test Automation Solution</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/faviconD.ico" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/faviconL.ico" media="(prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="css/atas/header.css">
+  <link rel="stylesheet" href="css/atas/style2.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/atas/variable_map_styles.css">
+  
+  
+
+</head>
+
+<body>
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar" class="inactive">
+      <h1><a href="index.html" class="logo"><img src="images/atas-logo-white.png" alt="ATAS Logo"
+            class="logo-image"></a></h1>
+      </h1>
+      <ul class="list-unstyled components mb-5">
+        <li>
+          <a href="."><span class="fa fa-cogs"></span> Test Script Builder</a>
+        </li>
+        <li>
+          <a href="object-map-external.html"><span class="fa fa-object-group"></span> Object
+            Map Builder</a>
+        </li>
+        <li>
+          <a href="encryption.html"><span class="fa fa-lock"></span> &nbsp;&nbsp;AES Encryption</a>
+        </li>
+        <li>
+          <a href="variable-map-builder.html" style="font-weight: bold;"><span class="fa fa-superscript"></span> &nbsp;Variable Map Builder</a>
+        </li>
+        <li>
+          <a href="" title="Work in Progress!" style="color: grey;" disabled>
+            <span class="fa fa-file-text-o"></span> &nbsp;Template Builder
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+      <div class="full-width-header">
+        <h1 class="mb-4 header-text"><strong>Variable Map Builder<span style="color: red; font-size: 16px;">
+              v1.0</span></strong>
+        </h1>
+        <h1 class="logo-on-header"><a href="index.html" class="logo"><img src="images/atas_full_logo_black.png"
+              alt="ATAS Logo" class="logo-header"></a></h1>
+      </div>
+      <div style="padding: 100px; padding-left: 250px;">
+        <div>
+          <div>
+            <label>
+              Variable Name
+              <input type="text" id="variable_name">
+            </label>
+            <label style="margin-left: 20px;">
+              Variable Value
+              <input type="text" id="variable_value">
+            </label>
+            <button id="addVariableBtn" class="button-74" style="margin-top: 10px; margin-left: 20px;">Add
+              Variable</button>
+            <div class="search-container" style="display: none; margin-bottom: 20px;">
+              <label for="searchInput">Search Variable:</label>
+              <input type="text" id="searchInput" placeholder="Search by Variable Name or Value"
+                oninput="searchVariables()">
+            </div>
+          </div>
+          <table class="variable-table" style="display: none;">
+            <thead>
+              <tr>
+                <th>Sr. No.</th>
+                <th>Variable Name</th>
+                <th>Variable Value</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="variableList"></tbody>
+          </table>
+          <div>
+            <a id="uploadLink" href="">Already have an existing Variable Map?</a>
+            <h2 style="margin-top: 20px;">Generated JSON</h2>
+            <pre id="jsonOutput"></pre>
+            <button id="downloadButton" class="button-74">Download JSON</button>
+            <button id="copyButton" class="button-74" style="margin-left: 10px;">Copy JSON</button>
+          </div>
+        </div>
+        <script src="js/atas/variable_map_script.js"></script>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div>
+    <footer>
+      <p style="text-align: center; background-color: black; margin-bottom: auto; color: white;">
+        Copyright &copy;
+        <script>document.write(new Date().getFullYear());</script> Xebia Appcino | All rights reserved |
+        Designed by Arjit</a>
+      </p>
+    </footer>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -630,3 +630,19 @@ function toggleTestCaseDetails(button) {
         collapseTestCaseName.textContent = testCaseNameInput.value;
     }
 }
+
+function toggleTestCaseDetails(button) {
+    const testCaseDetails = button.closest('.form-section').querySelector('.object-container');
+    const collapseIcon = button.querySelector('.collapse-icon');
+
+    if (testCaseDetails.style.display === 'none') {
+        testCaseDetails.style.display = 'block';
+        collapseIcon.textContent = '▼';
+
+    } else {
+        testCaseDetails.style.display = 'none';
+        collapseIcon.textContent = '►';
+    }
+}
+
+
