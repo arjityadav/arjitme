@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/faviconD.ico" media="(prefers-color-scheme: light)" />
     <link rel="icon" type="image/png" sizes="32x32" href="/images/faviconL.ico" media="(prefers-color-scheme: dark)" />
     <link rel="stylesheet" href="css/atas/header.css">
-    <link rel="stylesheet" href="css/atas/styles-ome.css">
+    <link rel="stylesheet" href="css/atas/appianAction.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/atas/style2.css">
 
@@ -28,8 +28,9 @@
                     <a href="."><span class="fa fa-cogs"></span> Test Script</a>
                 </li>
                 <li>
-                    <a style="font-weight: bold;" href="object-map-external.html"><span
-                            class="fa fa-object-group"></span> Object Map</a>
+                    <a href="variable-map-builder.html">
+                        <span class="fa fa-object-group"></span>&nbsp;Object Map
+                    </a>
                 </li>
                 <li>
                     <a href="variable-map-builder.html">
@@ -37,9 +38,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="appian-action-builder.html">
-                        <span class="fa fa-bandcamp"></span> &nbsp;Appian Action
-                    </a>
+                    <a style="font-weight: bold;" href="appian-action-builder.html"><span
+                        class="fa fa-bandcamp"></span> &nbsp;Appian Action</a>
                 </li>
                 <li>
                     <a href="encryption.html"><span class="fa fa-lock"></span> &nbsp;&nbsp;AES Encryption</a>
@@ -55,45 +55,41 @@
         <!-- Page Content  -->
         <div id="content">
                 <div class="full-width-header">
-                    <h1 class="mb-4 header-text"><strong>Object Map Builder<span
+                    <h1 class="mb-4 header-text"><strong>Appian Action Builder<span
                                 style="color: red; font-size: 16px;">
-                                v1.2</span></strong>
+                                v1.0</span></strong>
                     </h1>
                     <h1 class="logo-on-header"><a href="index.html" class="logo"><img src="images/atas_full_logo_black.png" alt="ATAS Logo"
                                 class="logo-header"></a></h1>
                 </div>
-                <div style="padding: 100px; padding-left: 250px;">
+                <div style="padding: 80px; padding-left: 250px;">
                 <div id="app">
-                    <div class="object-form">
-                        <label>Object Name <span style="color: red;">*</span></label>
-                        <input type="text" id="objectName">
-                    </div>
-                    <div class="object-form">
-                        <label>Locator Name <span style="color: red;">*</span></label>
-                        <select id="locatorName"></select>
-                    </div>
-                    <div id="xpathTypeContainer" class="object-form" style="display: none;">
-                        <label>XPath Type</label>
-                        <select id="xpathType"></select>
-                    </div>
-                    <div class="object-form">
-                        <label>Locator Value <span style="color: red;">*</span></label>
-                        <input type="text" id="locatorValue">
-                    </div>
-                    <button onclick="addObject()" style="margin-bottom: 10px;" class="button-74">Add Object</button>
-                    <div id="objectContainer"></div>
                     <div>
-                        <label style="font-weight: bold; width: auto; margin-top: 5px; margin-bottom: 5px;">Object Map
-                            External JSON</label>
-                        <div class="json-output" id="jsonOutput">{}</div>
+                        <label>Action Type:</label>
+                        <select id="action_type" onchange="updateConfigFields()">
+                            <option value="ui">UI</option>
+                        </select>
                     </div>
-
-                    <button onclick="downloadJSON()" class="button-74" style="margin-top: 10px;">Download JSON</button>
+                    
+                    <div>
+                        <label>Action Name:</label>
+                        <select id="action_name" onchange="updateConfigFields()">
+                            <option value="ui_appian_open_browser">ui_appian_open_browser</option>
+                            <option value="ui_appian_action">ui_appian_action</option>
+                        </select>
+                    </div>
+                    
+                    <div id="configFields"></div>
+                    
+                    <button class="button-74" onclick="generateJson()">Generate JSON</button>
                     <button onclick="copyJSON()" class="button-74" style="margin-left: 5px;">Copy JSON</button><br><br>
-                    <a href="#" onclick="openFileInput()"><u>Edit an already existing Object Map?</u></a>
+                    <label>Json Output</label>
+                    <pre id="jsonOutput"></pre>
+                    
+                    
                 </div>
 
-                <script src="js/atas/script-ome.js"></script>
+                <script src="js/atas/appianAction.js"></script>
             </div>
         </div>
     </div>
